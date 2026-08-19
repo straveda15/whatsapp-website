@@ -5,7 +5,7 @@ import Problem from "./components/Problem";
 import ProductJourney from "./components/ProductJourney";
 import CoreDifference from "./components/CoreDifference";
 import AIAgent from "./components/AIAgent";
-import HumanAI from "./components/HumanAI";
+import HumanAI from "./components/HumanAi";
 import Marketing from "./components/Marketing";
 import WorkflowBuilder from "./components/WorkflowBuilder";
 import Industries from "./components/Industries";
