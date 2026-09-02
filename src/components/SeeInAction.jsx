@@ -1,5 +1,20 @@
 import React from "react";
-import { Play } from "lucide-react";
+
+// Clean Play Outline Icon
+const PlayOutlineIcon = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polygon points="5 3 19 12 5 21 5 3" />
+  </svg>
+);
 
 const steps = [
   {
@@ -19,66 +34,68 @@ const steps = [
   },
 ];
 
-const SeeInAction = () => {
+export const SeeInAction = () => {
   return (
-  <section
-  id="see-in-action"
-  className="w-full bg-[#f8fbff] px-6 py-16 sm:px-8 lg:px-14 lg:py-20"
->
-      <div className="mx-auto max-w-[1240px]">
+    <section
+      id="see-in-action"
+      className="w-full bg-[#f8fafc] py-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto max-w-6xl">
+        
+        {/* ── Main Container Card ── */}
+        <div className="grid grid-cols-1 items-center gap-10 rounded-[32px] border border-[#e2e8f0] bg-white p-8 shadow-[0_8px_30px_rgba(15,23,42,0.03)] sm:p-12 lg:grid-cols-2 lg:gap-14 lg:p-14">
+          
+          {/* ── Left Content ── */}
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[38px] md:leading-tight">
+              See Sandesa in action.
+            </h2>
 
-        {/* ── Main Banner Box ── */}
-        <div className="rounded-[30px] border border-[#eef2f6] bg-white p-8 sm:p-12 lg:p-14 shadow-[0_10px_35px_rgba(15,23,42,0.03)]">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+            <p className="mt-4 max-w-md text-[14px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
+              Watch a lead go from “Hi” to “qualified” without a salesperson
+              touching the conversation.
+            </p>
 
-            {/* ── Left Column: Headline & Action Buttons ── */}
-            <div className="max-w-[480px]">
-              <h2 className="text-[28px] sm:text-[36px] lg:text-[40px] font-bold leading-[1.15] tracking-tight text-[#0f172a]">
-                See Sandesa in action.
-              </h2>
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              {/* Watch Demo Button */}
+              <a
+                href="#watch-demo"
+                className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#2563eb] px-6 py-3 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(37,99,235,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:scale-95"
+              >
+                <PlayOutlineIcon />
+                <span>Watch 2-Min Demo</span>
+              </a>
 
-              <p className="mt-4 text-[13.5px] sm:text-[14.5px] leading-[1.65] text-[#64748b]">
-                Watch a lead go from “Hi” to “qualified” without a salesperson touching the conversation.
-              </p>
-
-              {/* Action Buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-3.5">
-                {/* Watch Demo Button */}
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1d64ec] px-6 py-2.5 sm:py-3 text-[13.5px] font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1554cb]"
-                >
-                  <Play size={14} strokeWidth={2.4} />
-                  <span>Watch 2-Min Demo</span>
-                </button>
-
-                {/* Book Live Demo Button */}
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center rounded-full border border-[#e2e8f0] bg-white px-6 py-2.5 sm:py-3 text-[13.5px] font-semibold text-[#0f172a] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f8fafc] hover:border-[#cbd5e1]"
-                >
-                  <span>Book a Live Demo</span>
-                </button>
-              </div>
+              {/* Book a Live Demo Button */}
+              <a
+                href="#book-demo"
+                className="inline-flex items-center justify-center rounded-2xl border border-[#e2e8f0] bg-white px-6 py-3 text-[13.5px] font-semibold text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:bg-[#f8fafc] active:scale-95"
+              >
+                <span>Book a Live Demo</span>
+              </a>
             </div>
+          </div>
 
-            {/* ── Right Column: 3 Vertical Step Cards ── */}
-            <div className="flex flex-col items-center max-w-[440px] w-full ml-auto">
+          {/* ── Right Flow Steps ── */}
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-[420px]">
               {steps.map(({ step, title, description }, index) => (
-                <React.Fragment key={step}>
+                <div key={step} className="flex flex-col items-center">
+                  
                   {/* Step Card */}
-                  <div className="flex w-full items-center gap-4 rounded-[20px] border border-[#eef2f6] bg-white p-4 sm:p-4.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:border-[#e2e8f0]">
+                  <div className="flex w-full items-center gap-4 rounded-2xl border border-[#e2e8f0] bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:border-[#cbd5e1]">
                     {/* Number Badge */}
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#ebf3fe] text-[12px] font-bold text-[#1d64ec]">
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-[#eff6ff] text-[13px] font-bold text-[#2563eb]">
                       {step}
-                    </div>
+                    </span>
 
-                    {/* Text Details */}
+                    {/* Text */}
                     <div>
-                      <h3 className="text-[13.5px] font-bold text-[#0f172a]">
+                      <h3 className="text-[13.5px] font-bold text-[#0a1128]">
                         {title}
                       </h3>
-                      <p className="mt-0.5 text-[11.5px] sm:text-[12px] text-[#64748b]">
+                      <p className="mt-0.5 text-[12px] leading-snug text-[#64748b]">
                         {description}
                       </p>
                     </div>
@@ -86,13 +103,13 @@ const SeeInAction = () => {
 
                   {/* Vertical Connector Line */}
                   {index < steps.length - 1 && (
-                    <div className="h-3.5 w-[1px] bg-[#e2e8f0]" />
+                    <div className="h-4 w-[1px] bg-[#cbd5e1]" />
                   )}
-                </React.Fragment>
+                </div>
               ))}
             </div>
-
           </div>
+
         </div>
 
       </div>

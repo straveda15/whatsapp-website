@@ -30,7 +30,7 @@ const footerLinks = {
 };
 
 /* =========================
-   LinkedIn Custom Icon
+   Social Media Custom Icons
 ========================= */
 const LinkedInIcon = () => (
   <svg
@@ -43,9 +43,6 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-/* =========================
-   Instagram Custom Icon
-========================= */
 const InstagramIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -54,43 +51,31 @@ const InstagramIcon = () => (
     aria-hidden="true"
   >
     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.333.014 8.741 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324z" />
-
-    <circle
-      cx="18.406"
-      cy="5.594"
-      r="1.44"
-      fill="currentColor"
-    />
+    <circle cx="18.406" cy="5.594" r="1.44" fill="currentColor" />
   </svg>
 );
 
-/* =========================
-   Social Links
-========================= */
 const socials = [
   {
     Icon: LinkedInIcon,
     label: "LinkedIn",
-    href: "#",
+    href: "https://linkedin.com",
   },
   {
     Icon: InstagramIcon,
     label: "Instagram",
-    href: "#",
+    href: "https://instagram.com",
   },
 ];
 
 const Footer = () => {
   /* =========================
-     Scroll To Section
+     Smooth Scroll To Section
   ========================= */
   const scrollToSection = (targetId) => {
     const el = document.getElementById(targetId);
-
     if (el) {
-      const topOffset =
-        el.getBoundingClientRect().top + window.pageYOffset - 70;
-
+      const topOffset = el.getBoundingClientRect().top + window.pageYOffset - 70;
       window.scrollTo({
         top: topOffset,
         behavior: "smooth",
@@ -111,44 +96,35 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#EAF3FF] px-6 pt-16 pb-8 text-[#102A43] sm:px-8 lg:px-14">
-      <div className="relative z-10 mx-auto max-w-[1240px]">
+    <footer className="relative w-full border-t border-[#d8e6fe] bg-[#f0f6ff] px-5 pt-14 pb-8 text-[#0a1128] sm:px-8 lg:px-14">
+      <div className="mx-auto max-w-[1240px]">
 
-        {/* =========================
-            Back To Top
-        ========================= */}
-        <div className="mb-10 flex justify-end">
+        {/* ── Top Row: Back to Top ── */}
+        <div className="mb-8 flex justify-end">
           <button
             type="button"
             onClick={scrollToTop}
-            className="group flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#5B6B7A] transition-colors hover:text-[#1D64EC]"
+            className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[#64748b] transition-colors hover:text-[#2563eb]"
           >
             <ArrowUp
               size={14}
               className="transition-transform group-hover:-translate-y-1"
             />
-
-            Back to Top
+            <span>Back to Top</span>
           </button>
         </div>
 
-        {/* =========================
-            Main Footer
-        ========================= */}
-        <div className="grid grid-cols-1 gap-12 border-b border-[#102A43]/10 pb-14 sm:grid-cols-2 lg:grid-cols-5">
+        {/* ── Main Footer Grid ── */}
+        <div className="grid grid-cols-1 gap-10 border-b border-[#d8e6fe] pb-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12">
 
-          {/* =========================
-              Brand
-          ========================= */}
+          {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-1">
-
             <button
               type="button"
               onClick={() => scrollToSection("hero")}
-              className="mb-6 flex cursor-pointer items-center gap-3"
+              className="mb-4 flex cursor-pointer items-center gap-2.5"
             >
-              {/* Actual Sandesa Logo */}
-              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_4px_14px_rgba(29,100,236,0.18)]">
+              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_2px_8px_rgba(37,99,235,0.15)]">
                 <img
                   src={logo}
                   alt="Sandesa"
@@ -156,27 +132,26 @@ const Footer = () => {
                 />
               </div>
 
-              {/* Sandesa Name */}
-              <span className="text-xl font-extrabold tracking-tight text-[#1D64EC]">
+              <span className="text-xl font-bold tracking-tight text-[#0a1128]">
                 Sandesa
               </span>
             </button>
 
-            <p className="max-w-[220px] text-[13px] leading-6 text-[#5B6B7A]">
+            <p className="max-w-[240px] text-[13px] leading-relaxed text-[#64748b]">
               AI-powered WhatsApp automation that turns conversations
               into pipeline, customers, and revenue.
             </p>
 
-            {/* =========================
-                Socials
-            ========================= */}
-            <div className="mt-6 flex gap-3">
+            {/* Social Icons */}
+            <div className="mt-5 flex items-center gap-2.5">
               {socials.map(({ Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#102A43]/10 bg-white/60 text-[#5B6B7A] transition-all hover:border-[#1D64EC] hover:bg-[#1D64EC] hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d8e6fe] bg-white text-[#64748b] transition-all hover:border-[#2563eb] hover:bg-[#2563eb] hover:text-white"
                 >
                   <Icon />
                 </a>
@@ -184,149 +159,91 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* =========================
-              Footer Link Sections
-          ========================= */}
+          {/* Columns 2, 3, 4: Links Sections */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-
-              <h4 className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#1D64EC]">
+              <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
                 {category}
               </h4>
 
-              <ul className="space-y-3.5">
+              <ul className="space-y-2.5">
                 {links.map(({ label, id }) => (
                   <li key={label}>
-
                     <button
                       type="button"
                       onClick={() => scrollToSection(id)}
-                      className="group flex items-center text-left text-[13px] text-[#5B6B7A] transition-all hover:text-[#102A43]"
+                      className="text-left text-[13px] text-[#64748b] transition-colors hover:text-[#0a1128]"
                     >
-                      <span className="mr-2 text-[#1D64EC] opacity-0 transition-all group-hover:opacity-100">
-                        →
-                      </span>
-
-                      <span className="transition-transform group-hover:translate-x-1">
-                        {label}
-                      </span>
+                      {label}
                     </button>
-
                   </li>
                 ))}
               </ul>
             </div>
           ))}
 
-          {/* =========================
-              Contact Us
-          ========================= */}
+          {/* Column 5: Contact Us */}
           <div>
-
-            <h4 className="mb-5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#1D64EC]">
+            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
               Contact Us
             </h4>
 
-            <div className="space-y-5">
-
+            <div className="space-y-3.5">
               {/* Email */}
               <a
                 href="mailto:sandesa@gmail.com"
-                className="flex items-start gap-3 text-[13px] text-[#5B6B7A] transition-colors hover:text-[#102A43]"
+                className="flex items-start gap-2.5 text-[13px] text-[#64748b] transition-colors hover:text-[#0a1128]"
               >
-                <Mail
-                  size={16}
-                  className="mt-0.5 shrink-0 text-blue-600"
-                />
-
-                <span>
-                  sandesa@gmail.com
-                </span>
+                <Mail size={15} className="mt-0.5 shrink-0 text-[#2563eb]" />
+                <span>sandesa@gmail.com</span>
               </a>
 
               {/* Phone */}
               <a
                 href="tel:+917666534888"
-                className="flex items-start gap-3 text-[13px] text-[#5B6B7A] transition-colors hover:text-[#102A43]"
+                className="flex items-start gap-2.5 text-[13px] text-[#64748b] transition-colors hover:text-[#0a1128]"
               >
-                <Phone
-                  size={16}
-                  className="mt-0.5 shrink-0 text-blue-600"
-                />
-
-                <span>
-                  +91 76665 34888
-                </span>
+                <Phone size={15} className="mt-0.5 shrink-0 text-[#2563eb]" />
+                <span>+91 76665 34888</span>
               </a>
 
               {/* Location */}
-              <div className="flex items-start gap-3 text-[13px] leading-5 text-[#5B6B7A]">
-
-                <MapPin
-                  size={16}
-                  className="mt-0.5 shrink-0 text-blue-600"
-                />
-
+              <div className="flex items-start gap-2.5 text-[13px] leading-relaxed text-[#64748b]">
+                <MapPin size={15} className="mt-0.5 shrink-0 text-[#2563eb]" />
                 <span>
                   Pune, Maharashtra
                   <br />
                   411001, India
                 </span>
-
               </div>
-
             </div>
           </div>
+
         </div>
 
-        {/* =========================
-            Bottom Footer
-        ========================= */}
-        <div className="flex flex-col gap-5 pt-7 text-[11px] uppercase tracking-[0.12em] text-[#718096] sm:flex-row sm:items-center sm:justify-between">
+        {/* ── Bottom Row: Copyright & Legal Links ── */}
+        <div className="flex flex-col gap-4 pt-6 text-[11.5px] font-medium text-[#64748b] sm:flex-row sm:items-center sm:justify-between">
+          
+          <p>© {new Date().getFullYear()} Sandesa. All Rights Reserved.</p>
 
-          {/* Copyright */}
-          <p>
-            © {new Date().getFullYear()} Sandesa. All Rights Reserved.
-          </p>
-
-          {/* Bottom Links */}
           <div className="flex flex-wrap items-center gap-6">
-
             <button
               type="button"
               onClick={() => scrollToSection("faq")}
-              className="transition-colors hover:text-[#1D64EC]"
+              className="transition-colors hover:text-[#2563eb]"
             >
               FAQs
             </button>
-
-            <a
-              href="#"
-              className="transition-colors hover:text-[#1D64EC]"
-            >
+            <a href="#privacy" className="transition-colors hover:text-[#2563eb]">
               Privacy Policy
             </a>
-
-            <a
-              href="#"
-              className="transition-colors hover:text-[#1D64EC]"
-            >
+            <a href="#terms" className="transition-colors hover:text-[#2563eb]">
               Terms of Service
             </a>
-
           </div>
 
-          {/* Bottom Arrow */}
-          <button
-            type="button"
-            onClick={scrollToTop}
-            aria-label="Back to top"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#FF5A1F] text-[#FF5A1F] transition-all hover:bg-[#FF5A1F] hover:text-white"
-          >
-            <ArrowUp size={15} />
-          </button>
-
         </div>
+
       </div>
     </footer>
   );
