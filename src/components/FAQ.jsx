@@ -5,106 +5,126 @@ const faqs = [
   {
     question: "What is Sandesa?",
     answer:
-      "Sandesa is an AI-powered WhatsApp automation platform that turns everyday conversations into structured customer journeys — capturing leads, qualifying them, booking appointments and supporting customers.",
+      "Sandesa is an AI-powered WhatsApp automation platform that helps businesses manage conversations, qualify leads, automate follow-ups, and provide customer support.",
   },
   {
     question: "Do I need technical knowledge?",
     answer:
-      "No technical knowledge is required. Sandesa comes with ready-to-use templates, a visual workflow builder, and a dedicated onboarding team to set up your entire system in minutes.",
+      "No. Sandesa is designed to be easy to use. You can create workflows, manage conversations, and automate customer interactions without advanced technical knowledge.",
   },
   {
     question: "Can multiple employees use Sandesa?",
     answer:
-      "Yes! Sandesa includes a shared team inbox where multiple team members can view chats, take over conversations from AI, assign leads, and collaborate seamlessly from one number.",
+      "Yes. Multiple employees can use Sandesa through team inboxes and shared workspaces, making it easy for teams to manage customer conversations together.",
   },
   {
     question: "Can AI transfer conversations to humans?",
     answer:
-      "Absolutely. Whenever a lead is hot, asks a complex custom request, or requests a human agent, Sandesa instantly notifies your sales or support reps with the complete context.",
+      "Yes. Sandesa AI can automatically hand over conversations to a human team member when a request is complex or requires personal assistance.",
   },
   {
     question: "Can I run WhatsApp campaigns?",
     answer:
-      "Yes, you can broadcast targeted, segmented campaigns on WhatsApp to previous leads and customers, and let AI automatically handle all incoming replies in real-time.",
+      "Yes. Sandesa supports WhatsApp campaigns that help businesses engage customers, send updates, and follow up with leads at the right time.",
   },
   {
     question: "Can Sandesa integrate with my CRM?",
     answer:
-      "Yes, Sandesa integrates seamlessly with leading CRMs (HubSpot, Salesforce, Zoho, LeadSquared), Google Sheets, Webhooks, and Zapier for real-time lead sync.",
+      "Yes. Sandesa can connect with your CRM and other business tools so that customer conversations and lead information can be managed in one workflow.",
   },
   {
     question: "Can I automate follow-ups?",
     answer:
-      "Yes, you can schedule automated smart nudges and multi-step follow-up sequences based on customer interest, stage, and custom timelines.",
+      "Yes. You can automate follow-ups based on customer actions, conversations, and workflow conditions so that important leads do not get missed.",
   },
   {
     question: "Can I build workflows?",
     answer:
-      "Yes, our visual workflow builder allows you to drag-and-drop conversational logic, qualification rules, conditional branching, and automatic action triggers easily.",
+      "Yes. Sandesa includes a workflow builder that lets you create automated customer journeys based on your business requirements.",
   },
 ];
 
 const FAQ = () => {
-  // First item open by default to match the reference screenshot exactly
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleToggle = (index) => {
+    setOpenIndex((current) => (current === index ? null : index));
   };
 
   return (
-    <section id="faq" className="w-full bg-[#f8fbff] px-6 py-20 sm:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto max-w-[860px]">
-
+    <section
+      id="faq"
+      className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8 border-t border-[#e2e8f0]"
+    >
+      <div className="mx-auto max-w-6xl">
+        
         {/* ── Top Pill Badge ── */}
-        <div className="mb-6 flex justify-center">
-          <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
+        <div className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             FAQ
           </span>
         </div>
 
-        {/* ── Heading (Reduced Font Weight) ── */}
-        <h2 className="text-center text-[30px] sm:text-[38px] lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0f172a]">
-          Questions, answered.
-        </h2>
+        {/* ── Heading ── */}
+        <div className="mt-5 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+            Questions, answered.
+          </h2>
+        </div>
 
-        {/* ── FAQ Accordion List ── */}
-        <div className="mt-12 space-y-3 sm:space-y-3.5">
-          {faqs.map(({ question, answer }, index) => {
-            const isOpen = openIndex === index;
+        {/* ── FAQ List (Wide & Sleek Cards) ── */}
+        <div className="mx-auto mt-12 max-w-[820px]">
+          <div className="space-y-3">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
 
-            return (
-              <div
-                key={question}
-                className="overflow-hidden rounded-[20px] border border-[#eef2f6] bg-white shadow-[0_4px_16px_rgba(0,0,0,0.02)] transition-all duration-200 hover:border-[#e2e8f0]"
-              >
-                {/* Question Button */}
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(index)}
-                  className="flex w-full items-center justify-between px-6 py-4.5 sm:px-7 sm:py-5 text-left transition-colors cursor-pointer"
+              return (
+                <div
+                  key={faq.question}
+                  className={`overflow-hidden rounded-2xl border bg-white px-6 transition-all duration-200 ${
+                    isOpen
+                      ? "border-[#2563eb]/40 shadow-[0_4px_20px_rgba(37,99,235,0.06)]"
+                      : "border-[#e2e8f0] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1]"
+                  }`}
                 >
-                  <span className="text-[14px] sm:text-[14.5px] font-bold text-[#0f172a]">
-                    {question}
-                  </span>
-                  <ChevronDown
-                    size={17}
-                    className={`shrink-0 text-slate-400 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-slate-600" : ""
-                    }`}
-                    strokeWidth={2}
-                  />
-                </button>
+                  {/* Question Button */}
+                  <h3>
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() => handleToggle(index)}
+                      className="flex w-full cursor-pointer items-center justify-between py-4 text-left text-[13.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
+                    >
+                      <span>{faq.question}</span>
 
-                {/* Answer Content */}
-                {isOpen && (
-                  <div className="px-6 pb-5 sm:px-7 sm:pb-6 text-[13px] sm:text-[13.5px] leading-[1.65] text-[#64748b]">
-                    {answer}
+                      <ChevronDown
+                        size={16}
+                        strokeWidth={2}
+                        className={`shrink-0 text-[#64748b] transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-[#2563eb]" : ""
+                        }`}
+                      />
+                    </button>
+                  </h3>
+
+                  {/* Expandable Answer */}
+                  <div
+                    className={`grid transition-all duration-200 ease-in-out ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100 pb-4.5"
+                        : "grid-rows-[0fr] opacity-0 pb-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-[13px] leading-relaxed text-[#64748b]">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
-                )}
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
       </div>

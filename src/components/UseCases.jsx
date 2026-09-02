@@ -12,43 +12,44 @@ const useCases = [
   { title: "Update Customers" },
 ];
 
-const UseCases = () => {
+export const UseCases = () => {
   return (
     <section
       id="use-cases"
-      className="w-full border-y border-[#e8eef5] bg-[#f8fbff] px-6 py-20 sm:px-8 lg:px-14 lg:py-24"
+      className="w-full border-y border-[#e2e8f0] bg-[#f8fafc] py-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-6xl">
 
-        {/* Section Top Label */}
-        <div className="mb-6 flex justify-center">
-          <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
+        {/* ── Top Pill Badge ── */}
+        <div className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             USE CASES
           </span>
         </div>
 
-      
         {/* ── Heading ── */}
-        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-tight text-[#0f172a] sm:text-[38px] lg:text-[44px]">
-        What do you want WhatsApp to do?
-       
-        </h2>
+        <div className="mt-5 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+            What do you want WhatsApp to do?
+          </h2>
+        </div>
 
-
-        {/* Use Cases Grid */}
+        {/* ── 8 Use Cases Grid (4 Columns × 2 Rows) ── */}
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {useCases.map(({ title }) => (
             <div
               key={title}
-              className="group flex cursor-pointer items-center justify-between rounded-[20px] border border-[#e8eef5] bg-white px-5 py-4 shadow-[0_4px_16px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]"
+              className="group flex h-[54px] cursor-pointer items-center justify-between rounded-2xl border border-[#e8edf4] bg-white px-5 shadow-[0_4px_14px_rgba(0,0,0,0.03)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
             >
-              <span className="text-[13px] font-medium text-[#0f172a]">
+              {/* Card Title */}
+              <span className="text-[13.5px] font-medium text-[#0f172a]">
                 {title}
               </span>
 
+              {/* Blue Right Arrow */}
               <ArrowRight
                 size={14}
-                className="text-[#1d64ec] transition-transform duration-200 group-hover:translate-x-1"
+                className="text-[#2563eb] transition-transform duration-200 group-hover:translate-x-1"
                 strokeWidth={2}
               />
             </div>

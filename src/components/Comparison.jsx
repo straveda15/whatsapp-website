@@ -29,68 +29,83 @@ const comparisonData = [
   },
 ];
 
-const Comparison = () => {
+export const Comparison = () => {
   return (
-    <section className="w-full bg-[#f8fbff] px-6 py-20 sm:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto max-w-[1100px]">
+    <section
+      id="comparison"
+      className="w-full bg-white py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#e2e8f0]"
+    >
+      <div className="mx-auto max-w-5xl">
 
-        {/* ── Top Pill Badge ── */}
-        <div className="mb-6 flex justify-center">
-          <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
+        {/* ── Top Badge & Heading ── */}
+        <div className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             COMPARISON
           </span>
         </div>
 
-        {/* ── Heading (Reduced Font Weight) ── */}
-        <h2 className="text-center text-[30px] sm:text-[38px] lg:text-[44px] font-bold leading-[1.15] tracking-tight text-[#0f172a]">
-          WhatsApp is the channel.
-          <br />
-          Sandesa is the system behind it.
-        </h2>
+        <div className="mt-5 text-center">
+          <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px]">
+            WhatsApp is the channel.
+            <br />
+            Sandesa is the system behind it.
+          </h2>
+        </div>
 
-        {/* ── Comparison Table Card ── */}
-        <div className="mt-14 overflow-hidden rounded-[26px] border border-[#eef2f6] bg-white shadow-[0_10px_35px_rgba(15,23,42,0.03)]">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-[#f1f5f9]">
-                  <th className="py-4 px-6 sm:px-8 w-[24%]" />
-                  <th className="py-4 px-6 sm:px-8 w-[38%] text-[11.5px] font-bold uppercase tracking-wider text-slate-500">
-                    WHATSAPP BUSINESS
-                  </th>
-                  <th className="py-4 px-6 sm:px-8 w-[38%] bg-[#0d1627] text-[11.5px] font-bold uppercase tracking-wider text-white">
-                    SANDESA AI
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#f8fafc]">
-                {comparisonData.map(({ feature, whatsapp, sandesa }) => (
-                  <tr key={feature} className="transition-colors hover:bg-slate-50/40">
-                    {/* Feature Label */}
-                    <td className="py-4 px-6 sm:px-8 text-[13.5px] font-bold text-[#0f172a]">
-                      {feature}
-                    </td>
+        {/* ── Comparison Table Card (Mobile & Desktop Optimized) ── */}
+        <div className="mt-10 overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:mt-14">
 
-                    {/* WhatsApp Business Column */}
-                    <td className="py-4 px-6 sm:px-8">
-                      <div className="flex items-center gap-2 text-[12.5px] sm:text-[13px] text-[#64748b]">
-                        <X size={14} className="text-[#ef4444] shrink-0 stroke-[2.5]" />
-                        <span>{whatsapp}</span>
-                      </div>
-                    </td>
+          {/* Table Header */}
+          <div className="grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch border-b border-[#e2e8f0] text-center">
+            
+            {/* Empty top-left */}
+            <div className="bg-[#f8fafc] p-3 sm:p-4" />
 
-                    {/* Sandesa AI Column */}
-                    <td className="py-4 px-6 sm:px-8 bg-[#f8fbff]/80">
-                      <div className="flex items-center gap-2 text-[12.5px] sm:text-[13px] font-semibold text-[#0f172a]">
-                        <Check size={14} className="text-[#22c55e] shrink-0 stroke-[2.5]" />
-                        <span>{sandesa}</span>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            {/* WhatsApp Business Column Header */}
+            <div className="flex items-center justify-center bg-[#f8fafc] p-3 text-[10.5px] font-bold uppercase tracking-wider text-[#64748b] sm:text-[12px] sm:p-4">
+              <span>WHATSAPP<br className="sm:hidden" /> BUSINESS</span>
+            </div>
+
+            {/* Sandesa AI Column Header (Dark Navy) */}
+            <div className="flex items-center justify-center bg-[#0a1128] p-3 text-[11px] font-bold uppercase tracking-wider text-white sm:text-[12.5px] sm:p-4">
+              SANDESA AI
+            </div>
           </div>
+
+          {/* Table Rows */}
+          {comparisonData.map(({ feature, whatsapp, sandesa }, index) => (
+            <div
+              key={feature}
+              className={`grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch text-[12px] sm:text-[13.5px] ${
+                index !== 0 ? "border-t border-[#edf2f7]" : ""
+              }`}
+            >
+              {/* Feature Name */}
+              <div className="flex items-center p-3 font-bold text-[#0a1128] sm:p-4 sm:px-5">
+                {feature}
+              </div>
+
+              {/* WhatsApp Business Cell */}
+              <div className="flex items-start gap-1.5 p-3 text-[#64748b] sm:gap-2 sm:p-4">
+                <X
+                  size={14}
+                  className="mt-0.5 shrink-0 text-red-400"
+                  strokeWidth={2.4}
+                />
+                <span className="leading-snug">{whatsapp}</span>
+              </div>
+
+              {/* Sandesa AI Cell (Soft Blue Highlight Background) */}
+              <div className="flex items-start gap-1.5 bg-[#eff6ff]/70 p-3 font-semibold text-[#0a1128] sm:gap-2 sm:p-4">
+                <Check
+                  size={14}
+                  className="mt-0.5 shrink-0 text-[#16a34a]"
+                  strokeWidth={2.6}
+                />
+                <span className="leading-snug">{sandesa}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>

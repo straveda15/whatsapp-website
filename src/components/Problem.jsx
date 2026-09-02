@@ -1,5 +1,5 @@
 import React from "react";
-import { Clock, Repeat, RotateCw, Database } from "lucide-react";
+import { Clock, Repeat, RefreshCw, Database } from "lucide-react";
 
 const problems = [
   {
@@ -13,7 +13,7 @@ const problems = [
     description: "The same questions. The same answers. Every day.",
   },
   {
-    icon: RotateCw,
+    icon: RefreshCw,
     title: "Follow-ups get forgotten",
     description: "Interested today doesn't mean interested forever.",
   },
@@ -24,64 +24,58 @@ const problems = [
   },
 ];
 
-const Problem = () => {
+const ProblemSection = () => {
   return (
     <section
       id="problem"
-      className="w-full border-y border-[#e5eaf1] bg-[#f8fbff] px-6 py-20 sm:px-8 lg:px-14 lg:py-24"
+      className="w-full border-y border-[#e2e8f0] bg-[#f8fbff] py-14 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-6xl">
 
-        {/* ── Top Pill Badge ── */}
-        <div className="mb-6 flex justify-center">
-          <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
-            THE PROBLEM
+        {/* ── Top Pill Badge & Heading (Completely Left Aligned) ── */}
+        <div className="flex max-w-3xl flex-col items-start text-left">
+          
+          {/* Badge */}
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+            The problem
           </span>
+
+          {/* Heading */}
+          <h2 className="mt-4 text-left text-[30px] font-bold leading-[1.15] tracking-tight text-[#0a1128] sm:text-[38px] md:text-[44px]">
+            Your customers are already on WhatsApp.
+            <br />
+            Your business should be too.
+          </h2>
+
+          {/* Subtitle */}
+          <p className="mt-3 max-w-2xl text-left text-[14.5px] leading-relaxed text-[#64748b] sm:text-[16px]">
+            Customers ask questions. Leads arrive. Follow-ups get forgotten.
+            Teams get overloaded. Sandesa brings those conversations into one
+            intelligent system.
+          </p>
         </div>
 
-        {/* ── Heading ── */}
-        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-tight text-[#0f172a] sm:text-[38px] lg:text-[44px]">
-          Your customers are
-          <br />
-          already on WhatsApp.
-          <br />
-          Your business should be too.
-        </h2>
-
-        {/* ── Subtitle ── */}
-        <p className="mx-auto mt-4 max-w-[720px] text-center text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
-          Customers ask questions. Leads arrive. Follow-ups get forgotten.
-          Teams get overloaded. Sandesa
-          <br className="hidden sm:inline" />
-          brings those conversations into one intelligent system.
-        </p>
-
         {/* ── 4 Feature / Problem Cards ── */}
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {problems.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex flex-col justify-start rounded-[22px] border border-[#eef2f6] bg-white p-6 shadow-[0_4px_16px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(0,0,0,0.05)]"
+              className="flex flex-col items-start text-left rounded-2xl border border-[#e8edf4] bg-white p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_28px_rgba(0,0,0,0.05)]"
             >
               {/* Icon */}
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#ebf3fe]">
-                <Icon
-                  size={17}
-                  className="text-[#1d64ec]"
-                  strokeWidth={2.2}
-                />
-              </div>
+              <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#eef4ff] text-[#2563eb]">
+                <Icon className="h-5 w-5" strokeWidth={2.2} />
+              </span>
 
-              {/* Title & Description */}
-              <div className="mt-6">
-                <h3 className="text-[14px] font-bold text-[#0f172a]">
-                  {title}
-                </h3>
+              {/* Title */}
+              <h3 className="mt-5 text-[15px] font-bold text-[#0a1128]">
+                {title}
+              </h3>
 
-                <p className="mt-1.5 text-[12px] leading-[1.55] text-[#64748b] sm:text-[12.5px]">
-                  {description}
-                </p>
-              </div>
+              {/* Description */}
+              <p className="mt-2 text-[12.5px] leading-relaxed text-[#64748b]">
+                {description}
+              </p>
             </div>
           ))}
         </div>
@@ -91,4 +85,4 @@ const Problem = () => {
   );
 };
 
-export default Problem;
+export default ProblemSection;

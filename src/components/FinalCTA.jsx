@@ -1,68 +1,66 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
-const FinalCTA = () => {
+export const FinalCTA = () => {
   return (
-   <section
-  id="final-cta"
-  className="relative w-full overflow-hidden bg-[#071124] px-6 py-24 text-white sm:px-8 lg:px-14 lg:py-28"
->
-      
-      {/* ── Ambient Radial Glows ── */}
+    <section
+      id="final-cta"
+      className="relative w-full overflow-hidden bg-[#071328] py-16 px-4 sm:py-20 sm:px-6 lg:py-28 lg:px-8 text-white"
+    >
+      {/* ── Ambient Radial Glow ── */}
       <div
-        className="pointer-events-none absolute right-[-5%] bottom-[-20%] h-[550px] w-[550px] rounded-full"
+        className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[420px] w-[420px] rounded-full sm:h-[550px] sm:w-[550px]"
         style={{
-          background: "radial-gradient(circle, rgba(29,100,236,0.35) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(37, 99, 235, 0.35) 0%, transparent 70%)",
           filter: "blur(90px)",
         }}
       />
-      <div
-        className="pointer-events-none absolute left-[-5%] top-[-10%] h-[400px] w-[400px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(29,100,236,0.15) 0%, transparent 70%)",
-          filter: "blur(100px)",
-        }}
-      />
 
-      <div className="relative mx-auto max-w-[900px] text-center">
+      <div className="relative mx-auto max-w-3xl text-center">
 
-        {/* ── Headline (Reduced Font Weight) ── */}
-        <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold leading-[1.18] tracking-tight text-white">
-          Your customers are already talking.
+        {/* ── Heading (Exact Mobile Line Breaks) ── */}
+        <h2 className="mx-auto max-w-lg text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[38px] md:text-[44px]">
+          Your customers
           <br />
-          It's time your business started listening
+          are already talking.
           <br />
-          — and acting.
+          It's time your business
+          <br />
+          started listening — and
+          <br />
+          acting.
         </h2>
 
         {/* ── Subtitle ── */}
-        <p className="mx-auto mt-4 max-w-[560px] text-[14px] sm:text-[15px] font-normal leading-relaxed text-[#8da2c0]">
-          Build your first automated WhatsApp journey with Sandesa.
+        <p className="mx-auto mt-4 max-w-sm text-[13.5px] leading-relaxed text-[#94a3b8] sm:max-w-md sm:text-[15px]">
+          Build your first automated WhatsApp journey with
+          <br className="sm:hidden" /> Sandesa.
         </p>
 
-        {/* ── Action Buttons ── */}
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
+        {/* ── Action Buttons (Side by Side in Mobile) ── */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           
-          {/* Primary White Button */}
-          <button
-            type="button"
-            className="group inline-flex items-center justify-center gap-2 rounded-[16px] bg-white px-6 py-3 text-[14px] font-semibold text-[#071124] shadow-[0_4px_20px_rgba(0,0,0,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+          {/* 1. Primary White Button */}
+          <a
+            href="#get-started"
+            className="group inline-flex items-center justify-center gap-2 rounded-[20px] bg-white px-5 py-3 text-[13.5px] font-bold text-[#071328] shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 active:scale-95"
           >
             <span>Start with Sandesa</span>
             <ArrowRight
-              size={15}
-              className="transition-transform duration-200 group-hover:translate-x-0.5"
-              strokeWidth={2.2}
+              size={14}
+              className="transition-transform duration-200 group-hover:translate-x-1"
+              strokeWidth={2.6}
             />
-          </button>
+          </a>
 
-          {/* Secondary Navy Button */}
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-[16px] border border-[#1d335c] bg-[#11213f] px-6 py-3 text-[14px] font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#162b52]"
+          {/* 2. Secondary Translucent Navy Button */}
+          <a
+            href="#book-demo"
+            className="inline-flex items-center justify-center rounded-[20px] border border-[#233b68] bg-[#142647] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1a315c] hover:border-[#32528e] active:scale-95"
           >
             <span>Book a Demo</span>
-          </button>
+          </a>
 
         </div>
 

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Megaphone,
-  Sparkles,
-  MessageSquare,
-  ArrowRight,
-} from "lucide-react";
+import { Megaphone, Sparkles, MessageSquare, ArrowRight } from "lucide-react";
 
 const cards = [
   {
@@ -30,67 +25,68 @@ const cards = [
   },
 ];
 
-const ProductJourney = () => {
+export const ProductJourney = () => {
   return (
     <section
       id="product-journey"
-      className="w-full border-y border-[#e5eaf1] bg-[#f8fbff] px-6 py-20 sm:px-8 lg:px-14 lg:py-24"
+      className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-[1200px]">
-
+      <div className="mx-auto max-w-6xl">
+        
         {/* ── Top Pill Badge ── */}
-        <div className="mb-6 flex justify-center">
-          <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
+        <div className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             PRODUCT JOURNEY
           </span>
         </div>
 
-        {/* ── Heading ── */}
-        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-tight text-[#0f172a] sm:text-[38px] lg:text-[44px]">
-          One conversation. A
-          <br />
-          complete customer journey.
-        </h2>
+        {/* ── Heading & Subtitle ── */}
+        <div className="mt-5 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+            One conversation. A
+            <br />
+            complete customer journey.
+          </h2>
 
-        {/* ── Subtitle ── */}
-        <p className="mx-auto mt-4 max-w-[680px] text-center text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
-          Sandesa doesn't just send messages. It helps your business move
-          conversations forward.
-        </p>
+          <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
+            Sandesa doesn't just send messages. It helps your business move
+            conversations forward.
+          </p>
+        </div>
 
-        {/* ── Flow Diagram ── */}
-        <div className="mx-auto mt-14 flex max-w-[540px] flex-col items-center">
-
-          {/* Node 1 */}
-          <div className="flex w-full items-center justify-center rounded-[16px] border border-[#eef2f6] bg-white py-2.5 text-[13px] font-semibold text-[#0f172a] shadow-2xs">
+        {/* ── Flow Diagram (Wider length max-w-[640px] & Slim sleek height) ── */}
+        <div className="mx-auto mt-12 flex max-w-[640px] flex-col items-center">
+          
+          {/* Node 1: Ads / Website (Length jada, Height kam) */}
+          <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#e2e8f0] bg-white text-center text-[13px] font-medium text-[#0f172a] shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
             Ads / Website / QR / Social
           </div>
 
-          {/* Connector */}
-          <div className="h-4 w-[1px] bg-[#e2e8f0]" />
+          {/* Connector Line */}
+          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* Node 2 */}
-          <div className="flex w-full items-center justify-center rounded-[16px] border border-[#bbf7d0] bg-[#dcfce7] py-2.5 text-[13px] font-semibold text-[#15803d]">
+          {/* Node 2: WhatsApp (Length jada, Height kam) */}
+          <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#bbf7d0] bg-[#dcfce7] text-center text-[13px] font-medium text-[#0f172a]">
             WhatsApp
           </div>
 
-          {/* Connector */}
-          <div className="h-4 w-[1px] bg-[#e2e8f0]" />
+          {/* Connector Line */}
+          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* Node 3 */}
-          <div className="flex w-full items-center justify-center rounded-[16px] border border-[#d8e6fe] bg-[#ebf3fe] py-2.5 text-[13px] font-semibold text-[#1d64ec]">
+          {/* Node 3: Sandesa AI (Length jada, Height kam) */}
+          <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#bfdbfe] bg-[#eff6ff] text-center text-[13px] font-semibold text-[#1d4ed8]">
             Sandesa AI
           </div>
 
-          {/* Connector */}
-          <div className="h-4 w-[1px] bg-[#e2e8f0]" />
+          {/* Connector Line */}
+          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* Split Flow */}
-          <div className="grid w-full grid-cols-3 gap-3">
+          {/* 3 Split Buttons (Slim height h-9, Wide length) */}
+          <div className="grid w-full grid-cols-3 gap-4">
             {["Attract", "Convert", "Serve"].map((label) => (
               <div
                 key={label}
-                className="flex items-center justify-center rounded-[14px] border border-[#eef2f6] bg-white py-2 text-[12.5px] font-semibold text-[#0f172a] shadow-2xs"
+                className="flex h-9 w-full items-center justify-center rounded-xl border border-[#e2e8f0] bg-white text-center text-[12.5px] font-medium text-[#0f172a] shadow-[0_1px_4px_rgba(0,0,0,0.02)]"
               >
                 {label}
               </div>
@@ -98,48 +94,45 @@ const ProductJourney = () => {
           </div>
         </div>
 
-        {/* ── 3 Bottom Action Cards ── */}
-        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
+        {/* ── 3 Action Cards ── */}
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {cards.map((card) => {
             const Icon = card.icon;
 
             return (
               <div
                 key={card.label}
-                className="group flex flex-col justify-between rounded-[24px] border border-[#eef2f6] bg-white p-6 shadow-[0_4px_16px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(0,0,0,0.05)] sm:p-7"
+                className="group flex flex-col justify-between rounded-[22px] border border-[#e8edf4] bg-white p-7 shadow-[0_4px_24px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
               >
                 <div>
-
                   {/* Icon & Label */}
-                  <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0d1627] text-white shadow-2xs">
-                      <Icon size={15} strokeWidth={2.2} />
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#0a1128] text-white">
+                      <Icon size={17} strokeWidth={2.2} />
                     </div>
-
-                    <span className="text-[10.5px] font-bold uppercase tracking-wider text-[#1d64ec]">
+                    <span className="text-[11.5px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
                       {card.label}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-5 text-[15px] font-bold leading-snug text-[#0f172a]">
+                  <h3 className="mt-6 text-[15.5px] font-bold leading-snug text-[#0a1128]">
                     {card.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-2 text-[12.5px] leading-[1.6] text-[#64748b]">
+                  <p className="mt-2 text-[12.5px] leading-relaxed text-[#64748b]">
                     {card.description}
                   </p>
                 </div>
 
                 {/* Explore Link */}
-                <div className="mt-7 flex items-center gap-1 text-[12.5px] font-semibold text-[#0f172a] transition-colors group-hover:text-[#1d64ec]">
+                <div className="mt-6 flex items-center gap-1.5 self-start text-[13px] font-semibold text-[#0a1128] transition-colors duration-200 group-hover:text-[#2563eb]">
                   <span>Explore</span>
-
                   <ArrowRight
-                    size={13}
-                    strokeWidth={2.2}
-                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    size={14}
+                    strokeWidth={2.4}
+                    className="transition-transform duration-200 group-hover:translate-x-1"
                   />
                 </div>
               </div>

@@ -10,95 +10,61 @@ const steps = [
   { step: "STEP 7", title: "Follows Up" },
 ];
 
-const CoreDifference = () => {
+export const CoreDifference = () => {
   return (
     <section
       id="core-difference"
-      className="relative w-full bg-[#081326] px-6 py-20 sm:px-8 lg:px-14 lg:py-24"
+      className="w-full bg-[#0c182e] py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#182947]"
     >
-      {/* ── Section Top Line ── */}
-      <div className="absolute left-0 top-0 w-full border-t border-[#1a2d50]" />
-
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-6xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="mb-5 flex justify-center">
-          <span className="rounded-full border border-[#1b3158] bg-[#0e1d3a] px-3.5 py-1 text-[10px] font-normal uppercase tracking-wider text-[#7ea4f3]">
+        <div className="flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-[#1e345b] bg-[#112344] px-4 py-1 text-[10.5px] font-bold uppercase tracking-wider text-[#8da6d8]">
             CORE DIFFERENCE
           </span>
         </div>
 
-        {/* ── Heading ── */}
-        <h2 className="text-center text-[26px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[38px]">
-          Don't just automate replies.
-          <br />
-          Automate what happens next.
-        </h2>
+        {/* ── Heading & Subtitle (Exact Mobile Typography) ── */}
+        <div className="mt-6 text-center">
+          <h2 className="mx-auto max-w-xl text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[36px] md:text-[42px]">
+            Don't just
+            <br />
+            automate replies.
+            <br />
+            Automate what happens
+            <br />
+            next.
+          </h2>
 
-        {/* ── Subtitle ── */}
-        <p className="mx-auto mt-3 text-center text-[12px] font-normal text-[#8ca0be] sm:text-[13px]">
-          Talk less. Get more done.
-        </p>
-
-        {/* ── Step Cards Grid ── */}
-        <div className="mx-auto mt-10 max-w-[1020px] space-y-3">
-
-          {/* Row 1 */}
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.slice(0, 4).map(({ step, title }) => (
-              <StepCard
-                key={step}
-                step={step}
-                title={title}
-              />
-            ))}
-          </div>
-
-          {/* Row 2 */}
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.slice(4).map(({ step, title }) => (
-              <StepCard
-                key={step}
-                step={step}
-                title={title}
-              />
-            ))}
-
-            {/* Empty placeholder */}
-            <div className="hidden lg:block" />
-          </div>
-
+          <p className="mx-auto mt-4 text-[14px] font-normal text-[#8ba2c7] sm:text-[15px]">
+            Talk less. Get more done.
+          </p>
         </div>
-      </div>
 
-      {/* ── Section Bottom Line ── */}
-      <div className="absolute bottom-0 left-0 w-full border-b border-[#1a2d50]" />
+        {/* ── 7 Step Cards (Full width on Mobile, 4-Cols on Desktop) ── */}
+        <div className="mt-10 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map(({ step, title }) => (
+            <div
+              key={step}
+              className="flex flex-col justify-center rounded-[20px] border border-[#1d3359]/80 bg-[#122240] px-5 py-4 shadow-[0_2px_12px_rgba(0,0,0,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#2b4c82] hover:bg-[#15284b]"
+            >
+              {/* Step Tag */}
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#3b82f6]">
+                {step}
+              </span>
+
+              {/* Step Title (Extra Bold White Text) */}
+              <h3 className="mt-1.5 text-[14.5px] font-bold text-white">
+                {title}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 };
-
-const StepCard = ({ step, title }) => (
-  <div
-    className="
-      rounded-[16px]
-      border border-[#1a2d50]
-      bg-[#0f1d38]/90
-      px-4 py-3
-      transition-all duration-200
-      hover:border-[#274478]
-      hover:bg-[#122242]
-    "
-  >
-    {/* Step Label */}
-    <p className="text-[9px] font-normal uppercase tracking-wider text-[#3b82f6]">
-      {step}
-    </p>
-
-    {/* Title */}
-    <p className="mt-1 text-[11.5px] font-normal leading-snug text-white sm:text-[12px]">
-      {title}
-    </p>
-  </div>
-);
 
 export default CoreDifference;
