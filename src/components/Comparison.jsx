@@ -33,7 +33,7 @@ export const Comparison = () => {
   return (
     <section
       id="comparison"
-      className="w-full bg-white py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#e2e8f0]"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-y border-[#e2e8f0]"
     >
       <div className="mx-auto max-w-5xl">
 
@@ -44,7 +44,7 @@ export const Comparison = () => {
           </span>
         </div>
 
-        <div className="mt-5 text-center">
+        <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px]">
             WhatsApp is the channel.
             <br />
@@ -52,22 +52,19 @@ export const Comparison = () => {
           </h2>
         </div>
 
-        {/* ── Comparison Table Card (Mobile & Desktop Optimized) ── */}
-        <div className="mt-10 overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:mt-14">
+        {/* ── Comparison Table Card ── */}
+        <div className="mt-8 overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:mt-10">
 
           {/* Table Header */}
           <div className="grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch border-b border-[#e2e8f0] text-center">
             
-            {/* Empty top-left */}
-            <div className="bg-[#f8fafc] p-3 sm:p-4" />
+            <div className="bg-[#f8fafc] p-3 sm:p-3.5" />
 
-            {/* WhatsApp Business Column Header */}
-            <div className="flex items-center justify-center bg-[#f8fafc] p-3 text-[10.5px] font-bold uppercase tracking-wider text-[#64748b] sm:text-[12px] sm:p-4">
+            <div className="flex items-center justify-center bg-[#f8fafc] p-3 text-[10.5px] font-bold uppercase tracking-wider text-[#64748b] sm:text-[12px] sm:p-3.5">
               <span>WHATSAPP<br className="sm:hidden" /> BUSINESS</span>
             </div>
 
-            {/* Sandesa AI Column Header (Dark Navy) */}
-            <div className="flex items-center justify-center bg-[#0a1128] p-3 text-[11px] font-bold uppercase tracking-wider text-white sm:text-[12.5px] sm:p-4">
+            <div className="flex items-center justify-center bg-[#0a1128] p-3 text-[11px] font-bold uppercase tracking-wider text-white sm:text-[12.5px] sm:p-3.5">
               SANDESA AI
             </div>
           </div>
@@ -80,13 +77,11 @@ export const Comparison = () => {
                 index !== 0 ? "border-t border-[#edf2f7]" : ""
               }`}
             >
-              {/* Feature Name */}
-              <div className="flex items-center p-3 font-bold text-[#0a1128] sm:p-4 sm:px-5">
+              <div className="flex items-center p-3 font-bold text-[#0a1128] sm:p-3.5 sm:px-5">
                 {feature}
               </div>
 
-              {/* WhatsApp Business Cell */}
-              <div className="flex items-start gap-1.5 p-3 text-[#64748b] sm:gap-2 sm:p-4">
+              <div className="flex items-start gap-1.5 p-3 text-[#64748b] sm:gap-2 sm:p-3.5">
                 <X
                   size={14}
                   className="mt-0.5 shrink-0 text-red-400"
@@ -95,8 +90,7 @@ export const Comparison = () => {
                 <span className="leading-snug">{whatsapp}</span>
               </div>
 
-              {/* Sandesa AI Cell (Soft Blue Highlight Background) */}
-              <div className="flex items-start gap-1.5 bg-[#eff6ff]/70 p-3 font-semibold text-[#0a1128] sm:gap-2 sm:p-4">
+              <div className="flex items-start gap-1.5 bg-[#eff6ff]/70 p-3 font-semibold text-[#0a1128] sm:gap-2 sm:p-3.5">
                 <Check
                   size={14}
                   className="mt-0.5 shrink-0 text-[#16a34a]"
