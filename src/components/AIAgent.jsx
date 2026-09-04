@@ -50,11 +50,11 @@ const features = [
 
 export const AIAgent = () => {
   return (
-    <section id="ai-agent" className="w-full bg-white py-14 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section id="ai-agent" className="w-full bg-white pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-18 px-4 sm:px-6 lg:px-8 border-b border-[#e2e8f0]">
       <div className="mx-auto max-w-6xl">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
 
-          {/* ================= LEFT COLUMN ================= */}
+          {/* ================= LEFT COLUMN (TEXT SHIFTED HIGHER UP) ================= */}
           <div className="flex flex-col items-start text-left">
             {/* Top Pill Badge */}
             <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
@@ -62,7 +62,7 @@ export const AIAgent = () => {
             </span>
 
             {/* Heading */}
-            <h2 className="mt-5 text-left text-[30px] font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.15]">
+            <h2 className="mt-3.5 text-left text-[30px] font-bold tracking-tight text-[#0a1128] sm:mt-4 sm:text-4xl md:text-[42px] md:leading-[1.15]">
               Not just a chatbot.
               <br />
               An AI agent that knows
@@ -71,7 +71,7 @@ export const AIAgent = () => {
             </h2>
 
             {/* Feature Cards List */}
-            <div className="mt-8 w-full space-y-3.5 sm:mt-10">
+            <div className="mt-6 w-full space-y-3 sm:mt-8">
               {features.map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
@@ -84,7 +84,7 @@ export const AIAgent = () => {
 
                   {/* Text */}
                   <div>
-                    <h3 className="text-[15px] font-bold text-[#0a1128]">
+                    <h3 className="text-[15px] font-medium text-[#0a1128]">
                       {title}
                     </h3>
                     <p className="mt-0.5 text-[12.5px] leading-relaxed text-[#64748b]">
@@ -103,7 +103,7 @@ export const AIAgent = () => {
             <div className="overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_20px_50px_-10px_rgba(15,23,42,0.08),0_4px_16px_rgba(15,23,42,0.02)]">
               
               {/* Chat Header */}
-              <div className="flex h-[62px] items-center gap-3 bg-[#0a1128] px-5">
+              <div className="flex h-[60px] items-center gap-3 bg-[#0a1128] px-5">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0e2722]">
                   <WhatsAppIcon />
                 </div>
@@ -172,7 +172,7 @@ export const AIAgent = () => {
               </div>
             </div>
 
-            {/* Bottom 2 Info Cards: Mobile par ek ke niche ek (grid-cols-1 sm:grid-cols-2) */}
+            {/* Bottom 2 Info Cards */}
             <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
               
               {/* Card 1: Captured */}
@@ -181,7 +181,7 @@ export const AIAgent = () => {
                 <p className="mt-2.5 text-[10.5px] font-bold uppercase tracking-wider text-[#2563eb]">
                   CAPTURED
                 </p>
-                <p className="mt-0.5 text-[13px] font-bold text-[#0a1128]">
+                <p className="mt-0.5 text-[13px] font-medium text-[#0a1128]">
                   Requirement + budget
                 </p>
               </div>
@@ -192,7 +192,7 @@ export const AIAgent = () => {
                 <p className="mt-2.5 text-[10.5px] font-bold uppercase tracking-wider text-[#2563eb]">
                   BOOKED
                 </p>
-                <p className="mt-0.5 text-[13px] font-bold text-[#0a1128]">
+                <p className="mt-0.5 text-[13px] font-medium text-[#0a1128]">
                   Site visit · Sat 11:00
                 </p>
               </div>

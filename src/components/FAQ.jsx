@@ -54,7 +54,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8 border-t border-[#e2e8f0]"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-t border-[#e2e8f0]"
     >
       <div className="mx-auto max-w-6xl">
         
@@ -66,34 +66,33 @@ const FAQ = () => {
         </div>
 
         {/* ── Heading ── */}
-        <div className="mt-5 text-center">
+        <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
             Questions, answered.
           </h2>
         </div>
 
-        {/* ── FAQ List (Wide & Sleek Cards) ── */}
-        <div className="mx-auto mt-12 max-w-[820px]">
-          <div className="space-y-3">
+        {/* ── FAQ List ── */}
+        <div className="mx-auto mt-8 max-w-[820px] sm:mt-10">
+          <div className="space-y-2.5">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (
                 <div
                   key={faq.question}
-                  className={`overflow-hidden rounded-2xl border bg-white px-6 transition-all duration-200 ${
+                  className={`overflow-hidden rounded-2xl border bg-white px-5 transition-all duration-200 ${
                     isOpen
                       ? "border-[#2563eb]/40 shadow-[0_4px_20px_rgba(37,99,235,0.06)]"
                       : "border-[#e2e8f0] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1]"
                   }`}
                 >
-                  {/* Question Button */}
                   <h3>
                     <button
                       type="button"
                       aria-expanded={isOpen}
                       onClick={() => handleToggle(index)}
-                      className="flex w-full cursor-pointer items-center justify-between py-4 text-left text-[13.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
+                      className="flex w-full cursor-pointer items-center justify-between py-3.5 text-left text-[13.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
                     >
                       <span>{faq.question}</span>
 
@@ -107,11 +106,10 @@ const FAQ = () => {
                     </button>
                   </h3>
 
-                  {/* Expandable Answer */}
                   <div
                     className={`grid transition-all duration-200 ease-in-out ${
                       isOpen
-                        ? "grid-rows-[1fr] opacity-100 pb-4.5"
+                        ? "grid-rows-[1fr] opacity-100 pb-4"
                         : "grid-rows-[0fr] opacity-0 pb-0"
                     }`}
                   >

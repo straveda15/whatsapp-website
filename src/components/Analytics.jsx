@@ -98,11 +98,11 @@ const Analytics = () => {
   return (
     <section
       id="analytics"
-      className="w-full bg-white py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#e2e8f0]"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-y border-[#e2e8f0]"
     >
       <div className="mx-auto max-w-6xl">
 
-        {/* ── Top Pill Badge (Exact from Screenshot) ── */}
+        {/* ── Top Pill Badge ── */}
         <div className="flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             ANALYTICS
@@ -110,34 +110,31 @@ const Analytics = () => {
         </div>
 
         {/* ── Section Heading & Subtitle ── */}
-        <div className="mt-5 mx-auto flex max-w-xl flex-col items-center text-center">
-          <h2 className="text-[30px] font-bold leading-[1.15] tracking-tight text-[#0a1128] sm:text-[38px] md:text-[44px]">
-            Know what your
-            <br />
-            conversations are
-            <br />
-            actually doing.
-          </h2>
+       <div className="mx-auto mt-4 flex max-w-2xl flex-col items-center text-center sm:mt-5">
+  <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] lg:text-[44px]">
+    Know what your conversations
+    <br className="hidden sm:inline" />{" "}
+    are actually doing.
+  </h2>
 
-          <p className="mt-4 text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
+
+          <p className="mt-3 text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
             Conversations, leads, qualified leads, appointments, pipeline, AI
             resolution and response time — in one view.
           </p>
         </div>
 
         {/* ── Dashboard Card Mockup ── */}
-        <div className="mt-10 overflow-hidden rounded-[26px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_rgba(15,23,42,0.06)] sm:mt-14">
+        <div className="mt-8 overflow-hidden rounded-[26px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_rgba(15,23,42,0.06)] sm:mt-10">
 
           {/* Browser Header Bar */}
           <div className="flex items-center justify-between border-b border-[#e2e8f0] bg-[#f8fafc] px-4 py-3 sm:px-6">
-            {/* Window Dots */}
             <div className="flex items-center gap-1.5">
               <span className="h-2.5 w-2.5 rounded-full bg-[#ff7675]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#fdcb6e]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#00b894]" />
             </div>
 
-            {/* Address Pill */}
             <span className="rounded-full border border-[#e2e8f0] bg-white px-4 py-1 text-[11px] text-[#64748b] shadow-2xs">
               app.sandesa.ai/analytics
             </span>
@@ -184,7 +181,6 @@ const Analytics = () => {
                   </p>
                 </div>
 
-                {/* 7D / 30D / 90D Filter */}
                 <div className="flex rounded-full border border-[#e2e8f0] bg-[#f8fafc] p-1 text-[11px] font-semibold">
                   <span className="rounded-full px-3 py-0.5 text-[#64748b]">
                     7D
@@ -198,17 +194,17 @@ const Analytics = () => {
                 </div>
               </div>
 
-              {/* 4 Stats Cards: 2x2 Grid on Mobile, 4-Cols on Desktop */}
-              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {/* 4 Stats Cards */}
+              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-[20px] border border-[#e2e8f0] bg-white p-4 shadow-2xs"
+                    className="rounded-[20px] border border-[#e2e8f0] bg-white p-3.5 shadow-2xs"
                   >
                     <p className="text-[11.5px] font-medium text-[#64748b]">
                       {stat.label}
                     </p>
-                    <p className="mt-1 text-[18px] font-bold text-[#0a1128]">
+                    <p className="mt-1 text-[17px] font-bold text-[#0a1128]">
                       {stat.value}
                     </p>
                     <p className="mt-0.5 text-[11px] font-semibold text-[#16a34a]">
@@ -219,8 +215,8 @@ const Analytics = () => {
               </div>
 
               {/* Chart Bars */}
-              <div className="mt-4 rounded-2xl border border-[#e2e8f0] p-4">
-                <div className="flex h-24 items-end gap-1.5 sm:h-28">
+              <div className="mt-3.5 rounded-2xl border border-[#e2e8f0] p-4">
+                <div className="flex h-20 items-end gap-1.5 sm:h-24">
                   {chartHeights.map((height, index) => (
                     <span
                       key={index}
@@ -236,16 +232,16 @@ const Analytics = () => {
               </div>
 
               {/* Pipeline Stats */}
-              <div className="mt-4 grid grid-cols-3 gap-2.5">
+              <div className="mt-3.5 grid grid-cols-3 gap-2.5">
                 {pipelineStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-xl border border-[#e2e8f0] bg-white p-3 text-center sm:text-left"
+                    className="rounded-xl border border-[#e2e8f0] bg-white p-2.5 text-center sm:text-left"
                   >
                     <p className="text-[10.5px] font-medium text-[#64748b]">
                       {stat.label}
                     </p>
-                    <p className="mt-0.5 text-[13.5px] font-bold text-[#0a1128]">
+                    <p className="mt-0.5 text-[13px] font-bold text-[#0a1128]">
                       {stat.value}
                     </p>
                   </div>
@@ -253,22 +249,22 @@ const Analytics = () => {
               </div>
 
               {/* Conversations Table */}
-              <div className="mt-4 overflow-hidden rounded-2xl border border-[#e2e8f0]">
+              <div className="mt-3.5 overflow-hidden rounded-2xl border border-[#e2e8f0]">
                 <table className="w-full text-left text-[11.5px]">
                   <thead className="bg-[#f8fafc] text-[#64748b]">
                     <tr>
-                      <th className="px-3.5 py-2.5 font-semibold">Contact</th>
-                      <th className="hidden px-3.5 py-2.5 font-semibold sm:table-cell">Intent</th>
-                      <th className="px-3.5 py-2.5 font-semibold">Stage</th>
-                      <th className="hidden px-3.5 py-2.5 font-semibold sm:table-cell">Owner</th>
+                      <th className="px-3.5 py-2 font-semibold">Contact</th>
+                      <th className="hidden px-3.5 py-2 font-semibold sm:table-cell">Intent</th>
+                      <th className="px-3.5 py-2 font-semibold">Stage</th>
+                      <th className="hidden px-3.5 py-2 font-semibold sm:table-cell">Owner</th>
                     </tr>
                   </thead>
                   <tbody>
                     {conversations.map((conv) => (
                       <tr key={conv.contact} className="border-t border-[#edf2f7]">
-                        <td className="px-3.5 py-2.5 font-bold text-[#0a1128]">{conv.contact}</td>
-                        <td className="hidden px-3.5 py-2.5 text-[#64748b] sm:table-cell">{conv.intent}</td>
-                        <td className="px-3.5 py-2.5">
+                        <td className="px-3.5 py-2 font-bold text-[#0a1128]">{conv.contact}</td>
+                        <td className="hidden px-3.5 py-2 text-[#64748b] sm:table-cell">{conv.intent}</td>
+                        <td className="px-3.5 py-2">
                           <span
                             className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold ${
                               conv.stageType === "qualified"
@@ -281,7 +277,7 @@ const Analytics = () => {
                             {conv.stage}
                           </span>
                         </td>
-                        <td className="hidden px-3.5 py-2.5 text-[#64748b] sm:table-cell">{conv.owner}</td>
+                        <td className="hidden px-3.5 py-2 text-[#64748b] sm:table-cell">{conv.owner}</td>
                       </tr>
                     ))}
                   </tbody>

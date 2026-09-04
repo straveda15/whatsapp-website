@@ -67,7 +67,7 @@ export const Marketing = () => {
   return (
     <section
       id="marketing"
-      className="w-full bg-white py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#e2e8f0]"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-y border-[#e2e8f0]"
     >
       <div className="mx-auto max-w-6xl">
 
@@ -79,7 +79,7 @@ export const Marketing = () => {
         </div>
 
         {/* ── Heading ── */}
-        <div className="mt-5 text-center">
+        <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
             Stop broadcasting. Start
             <br />
@@ -87,12 +87,12 @@ export const Marketing = () => {
           </h2>
         </div>
 
-        {/* ── Step Flow Sequence (Exact 2-Row Layout on Mobile) ── */}
-        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center">
+        {/* ── Step Flow Sequence ── */}
+        <div className="mt-6 flex flex-col items-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center">
           
           {/* Row 1 */}
           <div className="flex items-center gap-2">
-            {stepsRow1.map((step, i) => (
+            {stepsRow1.map((step) => (
               <React.Fragment key={step}>
                 <div className="flex h-9 items-center justify-center rounded-2xl border border-[#e2e8f0] bg-white px-3.5 text-[12.5px] font-medium text-[#0f172a] shadow-xs">
                   {step}
@@ -119,7 +119,7 @@ export const Marketing = () => {
         </div>
 
         {/* ── Two Column Content ── */}
-        <div className="mt-12 grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:mt-14">
+        <div className="mt-9 grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:mt-11">
 
           {/* ── Left: Campaigns Card ── */}
           <div className="rounded-[24px] border border-[#e8edf4] bg-white p-5 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
@@ -138,15 +138,15 @@ export const Marketing = () => {
               </button>
             </div>
 
-            {/* Campaign Rows (Exact Mobile Layout) */}
-            <div className="mt-5 space-y-3.5 sm:mt-6">
+            {/* Campaign Rows */}
+            <div className="mt-4 space-y-3 sm:mt-5">
               {campaigns.map((camp) => (
                 <div
                   key={camp.name}
-                  className="flex flex-col gap-2 rounded-2xl border border-[#edf2f7] bg-white p-4 transition-all hover:border-[#cbd5e1] sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-2 rounded-2xl border border-[#edf2f7] bg-white p-3.5 transition-all hover:border-[#cbd5e1] sm:flex-row sm:items-center sm:justify-between"
                 >
                   {/* Name */}
-                  <span className="text-[13.5px] font-bold text-[#0a1128]">
+                  <span className="text-[13.5px] font-medium text-[#0a1128]">
                     {camp.name}
                   </span>
 
@@ -166,11 +166,11 @@ export const Marketing = () => {
           </div>
 
           {/* ── Right: 5 Feature Cards ── */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2.5">
             {features.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="flex items-start gap-3.5 rounded-2xl border border-[#e8edf4] bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.04)]"
+                className="flex items-start gap-3.5 rounded-2xl border border-[#e8edf4] bg-white p-3.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.04)]"
               >
                 {/* Icon */}
                 <div className="mt-0.5 flex shrink-0 items-center justify-center text-[#2563eb]">

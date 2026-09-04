@@ -29,59 +29,59 @@ export const ProductJourney = () => {
   return (
     <section
       id="product-journey"
-      className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-white pt-6 pb-14 px-4 sm:pt-10 sm:pb-18 sm:px-6 lg:pt-12 lg:pb-20 lg:px-8 border-b border-[#e2e8f0]"
     >
       <div className="mx-auto max-w-6xl">
         
-        {/* ── Top Pill Badge ── */}
+        {/* ── Top Pill Badge (Shifted Upwards) ── */}
         <div className="flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             PRODUCT JOURNEY
           </span>
         </div>
 
-        {/* ── Heading & Subtitle ── */}
-        <div className="mt-5 text-center">
+        {/* ── Heading & Subtitle (Shifted Upwards) ── */}
+        <div className="mt-3.5 text-center sm:mt-4">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
             One conversation. A
             <br />
             complete customer journey.
           </h2>
 
-          <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
+          <p className="mx-auto mt-2.5 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
             Sandesa doesn't just send messages. It helps your business move
             conversations forward.
           </p>
         </div>
 
-        {/* ── Flow Diagram (Wider length max-w-[640px] & Slim sleek height) ── */}
-        <div className="mx-auto mt-12 flex max-w-[640px] flex-col items-center">
+        {/* ── Flow Diagram ── */}
+        <div className="mx-auto mt-8 flex max-w-[640px] flex-col items-center sm:mt-10">
           
-          {/* Node 1: Ads / Website (Length jada, Height kam) */}
+          {/* Node 1: Ads / Website */}
           <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#e2e8f0] bg-white text-center text-[13px] font-medium text-[#0f172a] shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
             Ads / Website / QR / Social
           </div>
 
           {/* Connector Line */}
-          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
+          <div className="h-4.5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* Node 2: WhatsApp (Length jada, Height kam) */}
+          {/* Node 2: WhatsApp */}
           <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#bbf7d0] bg-[#dcfce7] text-center text-[13px] font-medium text-[#0f172a]">
             WhatsApp
           </div>
 
           {/* Connector Line */}
-          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
+          <div className="h-4.5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* Node 3: Sandesa AI (Length jada, Height kam) */}
+          {/* Node 3: Sandesa AI */}
           <div className="flex h-10 w-full items-center justify-center rounded-xl border border-[#bfdbfe] bg-[#eff6ff] text-center text-[13px] font-semibold text-[#1d4ed8]">
             Sandesa AI
           </div>
 
           {/* Connector Line */}
-          <div className="h-5 w-[1px] bg-[#cbd5e1]" />
+          <div className="h-4.5 w-[1px] bg-[#cbd5e1]" />
 
-          {/* 3 Split Buttons (Slim height h-9, Wide length) */}
+          {/* 3 Split Buttons */}
           <div className="grid w-full grid-cols-3 gap-4">
             {["Attract", "Convert", "Serve"].map((label) => (
               <div
@@ -95,7 +95,7 @@ export const ProductJourney = () => {
         </div>
 
         {/* ── 3 Action Cards ── */}
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-3">
           {cards.map((card) => {
             const Icon = card.icon;
 

@@ -45,18 +45,18 @@ const Industries = () => {
   return (
     <section
       id="industries"
-      className="w-full bg-white px-6 py-20 sm:px-8 lg:px-14 lg:py-24"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
     >
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1240px]">
         {/* ── Top Content ── */}
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center">
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#dbe3ee] bg-[#eff6ff] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#1d4ed8]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#dbe3ee] bg-[#eff6ff] px-3.5 py-1 text-xs font-semibold uppercase tracking-wide text-[#1d4ed8]">
             Industries
           </span>
 
           {/* Heading */}
-          <h2 className="text-3xl font-bold leading-[1.12] text-[#0d1627] sm:text-4xl md:text-[2.75rem]">
+          <h2 className="text-3xl font-bold leading-[1.15] text-[#0d1627] sm:text-4xl md:text-[2.75rem]">
             Built around the way 
             <br/>
             your business works.
@@ -64,11 +64,11 @@ const Industries = () => {
         </div>
 
         {/* ── Industry Cards ── */}
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {industries.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex items-center gap-4 rounded-2xl border border-[#dbe3ee] bg-white p-6 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/25 hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
+              className="flex items-center gap-4 rounded-2xl border border-[#dbe3ee] bg-white p-5 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/25 hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
             >
               {/* Icon */}
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">

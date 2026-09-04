@@ -52,7 +52,7 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
     >
       <div className="mx-auto max-w-6xl">
         
@@ -64,7 +64,7 @@ export const Pricing = () => {
         </div>
 
         {/* ── Heading & Subtitle ── */}
-        <div className="mt-5 text-center">
+        <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
             Plans that grow with
             <br />
@@ -77,21 +77,21 @@ export const Pricing = () => {
         </div>
 
         {/* ── 4 Pricing Cards Grid ── */}
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+        <div className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch sm:mt-11">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col justify-between rounded-[24px] bg-white p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative flex flex-col justify-between rounded-[24px] bg-white p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 ${
                 plan.recommended
                   ? "border-2 border-[#2563eb] shadow-[0_12px_36px_rgba(37,99,235,0.12)]"
                   : "border border-[#e8edf4] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
               }`}
             >
               <div>
-                {/* Recommended Badge (Only for Growth) */}
+                {/* Recommended Badge */}
                 {plan.recommended ? (
-                  <div className="mb-4">
-                    <span className="inline-block rounded-full bg-[#2563eb] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                  <div className="mb-3">
+                    <span className="inline-block rounded-full bg-[#2563eb] px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
                       RECOMMENDED
                     </span>
                   </div>
@@ -103,12 +103,12 @@ export const Pricing = () => {
                 </h3>
 
                 {/* Plan Description */}
-                <p className="mt-1.5 text-[12.5px] leading-relaxed text-[#64748b]">
+                <p className="mt-1 text-[12.5px] leading-relaxed text-[#64748b]">
                   {plan.description}
                 </p>
 
                 {/* Features List */}
-                <ul className="mt-6 space-y-2.5">
+                <ul className="mt-5 space-y-2">
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
@@ -126,10 +126,10 @@ export const Pricing = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="mt-8 pt-2">
+              <div className="mt-6 pt-2">
                 <a
                   href="#contact"
-                  className={`inline-flex w-full items-center justify-center rounded-2xl py-3 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
+                  className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
                     plan.recommended
                       ? "bg-[#2563eb] text-white shadow-[0_6px_20px_rgba(37,99,235,0.30)] hover:bg-[#1d4ed8]"
                       : "border border-[#e2e8f0] bg-white text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1] hover:bg-[#f8fafc]"
