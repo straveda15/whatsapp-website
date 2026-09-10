@@ -45,13 +45,14 @@ const Hero = () => {
           <div className="mt-8 flex w-full flex-col gap-3.5 sm:w-auto sm:flex-row sm:items-center">
 
             {/* 1. Get Started Free Button */}
-            <a
-              href="#get-started"
-              className="inline-flex items-center justify-center gap-2 rounded-[20px] bg-[#2563eb] px-7 py-3.5 text-[14.5px] font-semibold text-white shadow-[0_8px_24px_rgba(37,99,235,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:scale-95"
-            >
-              <span>Get Started Free</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            {/* 1. Get Started Free Button */}
+<a
+  href="#contact-us"
+  className="inline-flex items-center justify-center gap-2 rounded-[20px] bg-[#2563eb] px-7 py-3.5 text-[14.5px] font-semibold text-white shadow-[0_8px_24px_rgba(37,99,235,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:scale-95"
+>
+  <span>Get Started Free</span>
+  <ArrowRight className="h-4 w-4" />
+</a>
 
             {/* 2. Watch 2-Min Demo Button */}
             <a

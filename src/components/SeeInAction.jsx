@@ -65,12 +65,13 @@ export const SeeInAction = () => {
                 <span>Watch 2-Min Demo</span>
               </a>
 
-              <a
-                href="#book-demo"
-                className="inline-flex items-center justify-center rounded-2xl border border-[#e2e8f0] bg-white px-6 py-3 text-[13.5px] font-semibold text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:bg-[#f8fafc] active:scale-95"
-              >
-                <span>Book a Live Demo</span>
-              </a>
+             <button
+  type="button"
+  onClick={() => window.dispatchEvent(new Event("open-live-demo"))}
+  className="inline-flex items-center justify-center rounded-2xl border border-[#e2e8f0] bg-white px-6 py-3 text-[13.5px] font-semibold text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:bg-[#f8fafc] active:scale-95"
+>
+  <span>Book a Live Demo</span>
+</button>
             </div>
           </div>
 
