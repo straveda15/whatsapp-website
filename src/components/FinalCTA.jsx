@@ -55,13 +55,13 @@ export const FinalCTA = () => {
           </a>
 
           {/* 2. Secondary Translucent Navy Button */}
-          <a
-            href="#book-demo"
+          <button
+  type="button"
+  onClick={() => window.dispatchEvent(new Event("open-live-demo"))}
             className="inline-flex items-center justify-center rounded-[20px] border border-[#233b68] bg-[#142647] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1a315c] hover:border-[#32528e] active:scale-95"
           >
-            <span>Book a Demo</span>
-          </a>
-
+            Book a Demo
+          </button>
         </div>
 
       </div>
