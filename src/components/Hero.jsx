@@ -25,7 +25,6 @@ const Hero = () => {
 
           {/* Top Badge */}
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8e6fe] bg-[#eff6ff] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
-            <Sparkles className="h-3.5 w-3.5 text-[#2563eb]" />
             AI WHATSAPP AUTOMATION
           </span>
 
@@ -73,8 +72,7 @@ const Hero = () => {
 
           {/* Bottom Trust Line */}
           <div className="mt-8 flex items-center gap-2 text-left text-[13px] text-[#64748b]">
-            <span className="h-2 w-2 shrink-0 rounded-full bg-[#22c55e]" />
-            <span>Built for businesses that run on conversations.</span>
+            <span className="shrink-0 rounded-full bg-[#22c55e]" />
           </div>
 
         </div>

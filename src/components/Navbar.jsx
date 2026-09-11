@@ -5,46 +5,35 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import logo from "../assets/logosandesa.png";
 
 // ── Navbar Links ──
-
 const navLinks = [
   { label: "Home", href: "#hero" },
   { label: "Product", href: "#product-journey" },
   { label: "Use Cases", href: "#use-cases" },
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Contact Us", href: "#contact-us" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
-  const [selectedTime, setSelectedTime] = useState(
-  new Date().toTimeString().slice(0, 5)
-);
 
-useEffect(() => {
-  if (showDemo) {
-    setSelectedTime(new Date().toTimeString().slice(0, 5));
-  }
-}, [showDemo]);
+  useEffect(() => {
+    if (showDemo) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
-useEffect(() => {
-  if (showDemo) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showDemo]);
 
-  return () => {
-    document.body.style.overflow = "";
-  };
-}, [showDemo]);
+  // ── Date Validation ──
+  const today = new Date().toISOString().split("T")[0];
 
-// ── Date Validation ──
-const today = new Date().toISOString().split("T")[0];
   // ── Scroll shadow + Open Live Demo Event ──
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 15);
@@ -64,7 +53,6 @@ const today = new Date().toISOString().split("T")[0];
   }, []);
 
   // ── Smooth scroll ──
-
   const scrollToSection = (href) => {
     const id = href.replace("#", "");
     const element = document.getElementById(id);
@@ -91,7 +79,6 @@ const today = new Date().toISOString().split("T")[0];
         <div className="mx-auto flex max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-12">
 
           {/* ── Logo + Brand Name ── */}
-
           <button
             type="button"
             onClick={() => scrollToSection("#hero")}
@@ -99,7 +86,6 @@ const today = new Date().toISOString().split("T")[0];
             aria-label="Go to Home"
           >
             {/* Circular Logo Container */}
-
             <div className="flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center overflow-hidden rounded-full border border-[#dbe4f0] bg-white shadow-[0_4px_16px_rgba(37,99,235,0.14)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.22)]">
               <img
                 src={logo}
@@ -109,14 +95,12 @@ const today = new Date().toISOString().split("T")[0];
             </div>
 
             {/* Brand Name */}
-
             <span className="text-[23px] sm:text-[25px] font-extrabold tracking-tight text-[#0a1128]">
               Sandesa<span className="text-[#2563eb]"></span>
             </span>
           </button>
 
           {/* ── Desktop Navigation Links ── */}
-
           <nav className="hidden items-center gap-1.5 lg:flex">
             {navLinks.map(({ label, href }) => (
               <button
@@ -130,9 +114,8 @@ const today = new Date().toISOString().split("T")[0];
             ))}
           </nav>
 
-          {/* ── Desktop Live Demo Button ── */}
-
-          <div className="hidden items-center lg:flex">
+          {/* ── Desktop Live Demo + Contact Us Buttons ── */}
+          <div className="hidden items-center gap-3 lg:flex">
             <button
               type="button"
               onClick={() => setShowDemo(true)}
@@ -146,27 +129,33 @@ const today = new Date().toISOString().split("T")[0];
                 className="transition-transform duration-150 group-hover:translate-x-1"
               />
             </button>
+
+            <button
+              type="button"
+              onClick={() => scrollToSection("#contact-us")}
+              className="inline-flex items-center justify-center rounded-full border border-[#e2e8f0] bg-white px-5 py-2.5 text-[14.5px] font-semibold text-[#0a1128] transition-all duration-200 hover:border-[#2563eb] hover:text-[#2563eb] active:scale-95"
+            >
+              Contact Us
+            </button>
           </div>
-
-          {/* ── Mobile Menu Toggle Button ── */}
-
-          <button
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl text-[#0a1128] transition-colors hover:bg-slate-100 lg:hidden"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-          >
-            {isOpen ? (
-              <X size={24} strokeWidth={2.2} />
-            ) : (
-              <Menu size={24} strokeWidth={2.2} />
-            )}
-          </button>
         </div>
 
-        {/* ── Mobile Dropdown Menu ── */}
+        {/* ── Mobile Menu Toggle Button ── */}
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="flex h-11 w-11 items-center justify-center rounded-xl text-[#0a1128] transition-colors hover:bg-slate-100 lg:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? (
+            <X size={24} strokeWidth={2.2} />
+          ) : (
+            <Menu size={24} strokeWidth={2.2} />
+          )}
+        </button>
 
+        {/* ── Mobile Dropdown Menu ── */}
         {isOpen && (
           <div className="border-t border-[#e2e8f0] bg-white/95 px-5 pb-6 pt-4 backdrop-blur-lg shadow-xl lg:hidden">
             <nav className="flex flex-col gap-1.5">
@@ -183,7 +172,6 @@ const today = new Date().toISOString().split("T")[0];
             </nav>
 
             {/* ── Mobile Live Demo Button ── */}
-
             <div className="mt-5 border-t border-slate-100 pt-2">
               <button
                 type="button"
@@ -201,7 +189,6 @@ const today = new Date().toISOString().split("T")[0];
       </header>
 
       {/* ── Live Demo Popup ── */}
-
       {showDemo && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm"
@@ -211,9 +198,7 @@ const today = new Date().toISOString().split("T")[0];
             className="relative w-full max-w-2xl rounded-2xl bg-white p-6 shadow-2xl sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
-
             {/* Close Button */}
-
             <button
               type="button"
               onClick={() => setShowDemo(false)}
@@ -224,7 +209,6 @@ const today = new Date().toISOString().split("T")[0];
             </button>
 
             {/* Popup Content */}
-
             <div className="pr-10">
               <p className="text-sm font-semibold uppercase tracking-wider text-[#2563eb]">
                 Live Demo
@@ -241,16 +225,14 @@ const today = new Date().toISOString().split("T")[0];
             </div>
 
             {/* ── Demo Form ── */}
-
             <form
-  className="space-y-6"
-  onSubmit={(e) => {
-    e.preventDefault();
-    alert("Live Demo request submitted!");
-  }}
->
+              className="space-y-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Live Demo request submitted!");
+              }}
+            >
               {/* Name */}
-
               <input
                 type="text"
                 placeholder="Enter your name"
@@ -258,7 +240,6 @@ const today = new Date().toISOString().split("T")[0];
               />
 
               {/* Email */}
-
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -268,7 +249,6 @@ const today = new Date().toISOString().split("T")[0];
               />
 
               {/* Phone Number */}
-
               <input
                 type="tel"
                 placeholder="Enter your phone number"
@@ -279,9 +259,8 @@ const today = new Date().toISOString().split("T")[0];
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
               />
 
-              {/* Date + Time */}
-
-              <div className="grid grid-cols-2 gap-4">
+              {/* Date */}
+              <div>
                 <input
                   type="date"
                   min={today}
@@ -289,19 +268,9 @@ const today = new Date().toISOString().split("T")[0];
                   title="Please select today or a future date"
                   className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
                 />
-
-                <input
-  type="time"
-  value={selectedTime}
-  onChange={(e) => setSelectedTime(e.target.value)}
-  required
-  title="Please select a time"
-  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
-/>
               </div>
 
               {/* Submit */}
-
               <button
                 type="submit"
                 className="w-full rounded-xl bg-[#2563eb] py-3 text-sm font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-all hover:bg-[#1d4ed8] active:scale-[0.98]"
