@@ -3,7 +3,9 @@ import { Sparkles, ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-6 pb-14 px-5 sm:pt-10 sm:pb-18 sm:px-8 lg:px-14 lg:py-16">
+    <section 
+    id="hero"
+    className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-6 pb-14 px-5 sm:pt-10 sm:pb-18 sm:px-8 lg:px-14 lg:py-16">
 
       {/* Background Soft Blue Radial Glow */}
       <div

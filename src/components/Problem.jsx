@@ -26,7 +26,9 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-6 pb-12 px-5 sm:pt-10 sm:pb-16 sm:px-8 lg:px-14 lg:pt-12 lg:pb-16">
+    <section
+    id="problem"
+    className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-6 pb-12 px-5 sm:pt-10 sm:pb-16 sm:px-8 lg:px-14 lg:pt-12 lg:pb-16">
       <div className="mx-auto max-w-[1240px]">
 
         {/* ── Top Header (Shifted higher up) ── */}
