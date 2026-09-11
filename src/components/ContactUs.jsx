@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 function ContactUs() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-slate-900 selection:bg-blue-600 selection:text-white">
-      <Navbar />
+      
 
       <main>
         <section id = "contact-us" className="px-5 py-16 sm:px-8 sm:py-20 lg:px-12">

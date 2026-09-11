@@ -19,7 +19,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
+  const [selectedTime, setSelectedTime] = useState(
+  new Date().toTimeString().slice(0, 5)
+);
 
+useEffect(() => {
+  if (showDemo) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [showDemo]);
+
+// ── Date Validation ──
+const today = new Date().toISOString().split("T")[0];
   // ── Scroll shadow + Open Live Demo Event ──
 
   useEffect(() => {
@@ -256,13 +273,26 @@ const Navbar = () => {
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
               />
 
-              {/* Date */}
+              {/* Date + Time */}
 
-              <input
-                type="date"
-                required
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
-              />
+              <div className="grid grid-cols-2 gap-4">
+                <input
+                  type="date"
+                  min={today}
+                  required
+                  title="Please select today or a future date"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
+                />
+
+                <input
+  type="time"
+  value={selectedTime}
+  onChange={(e) => setSelectedTime(e.target.value)}
+  required
+  title="Please select a time"
+  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
+/>
+              </div>
 
               {/* Submit */}
 
