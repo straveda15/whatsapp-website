@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { getWhatsAppLink } from "../utils/whatsapp";
 
 const plans = [
   {
@@ -67,7 +68,7 @@ export const Pricing = () => {
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
             Plans that grow with
-            <br />
+            
             your conversations
           </h2>
 
@@ -90,11 +91,9 @@ export const Pricing = () => {
               <div>
                 {/* Recommended Badge */}
                 {plan.recommended ? (
-                  <div className="mb-3">
-                    <span className="inline-block rounded-full bg-[#2563eb] px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                      RECOMMENDED
-                    </span>
-                  </div>
+                  <span className="absolute right-5 top-5 inline-block rounded-full bg-[#2563eb] px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white sm:right-6 sm:top-6">
+                    RECOMMENDED
+                  </span>
                 ) : null}
 
                 {/* Plan Name */}
@@ -128,7 +127,7 @@ export const Pricing = () => {
               {/* CTA Button */}
               <div className="mt-6 pt-2">
                 <a
-  href="https://wa.me/919623095766"
+  href={getWhatsAppLink()}
   target="_blank"
   rel="noopener noreferrer"
   className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${

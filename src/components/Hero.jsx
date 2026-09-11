@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Description */}
         <p className="mt-5 max-w-xl text-left text-[16px] leading-[1.65] text-[#64748b] sm:text-[17.5px] lg:text-[18.5px]">
   Sandesa turns WhatsApp conversations into automated customer
-  journeys — helping your business capture leads, qualify prospects,
+  journeys helping your business capture leads, qualify prospects,
   follow up, answer questions and keep your team in the loop.
 </p>
 

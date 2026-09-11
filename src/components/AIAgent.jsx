@@ -134,7 +134,7 @@ export const AIAgent = () => {
                 {/* Message 2 (Outgoing WhatsApp Green) */}
                 <div className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-tr-sm bg-[#dcfce7] px-4 py-2.5">
                   <p className="text-[13px] leading-relaxed text-[#0f172a]">
-                    Yes — two ready-possession 2BHK units in Baner. Would you like to visit this weekend?
+                    Yes two ready-possession 2BHK units in Baner. Would you like to visit this weekend?
                   </p>
                   <div className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-500">
                     <span>11:02</span>

@@ -27,24 +27,21 @@ const problems = [
 const ProblemSection = () => {
   return (
     <section
-    id="problem"
-    className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-2 pb-12 px-5 sm:pt-10 sm:pb-16 sm:px-8 lg:px-14 lg:pt-12 lg:pb-16">
+      id="problem"
+      className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-2 pb-12 px-5 sm:pt-10 sm:pb-16 sm:px-8 lg:px-14 lg:pt-12 lg:pb-16">
       <div className="mx-auto max-w-[1240px]">
 
         {/* ── Top Header (Shifted higher up) ── */}
-        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+
           {/* Badge */}
           <span className="inline-flex items-center rounded-full bg-[#eff6ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             THE PROBLEM
           </span>
 
           {/* Heading */}
-         <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-          Your customers are
-            <br />
-            already on WhatsApp
-            <br />
+          <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+            <span className="sm:whitespace-nowrap">Your customers are already on WhatsApp</span> <br />
             Your business should be too
           </h2>
 

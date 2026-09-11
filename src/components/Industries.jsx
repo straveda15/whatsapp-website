@@ -49,17 +49,15 @@ const Industries = () => {
     >
       <div className="mx-auto max-w-[1240px]">
         {/* ── Top Content ── */}
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-3 text-center">
           {/* Badge */}
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
   INDUSTRIES
 </span>
 
           {/* Heading */}
-          <h2 className="text-3xl font-bold leading-[1.15] text-[#0d1627] sm:text-4xl md:text-[2.75rem]">
-            Built around the way 
-            <br/>
-            your business works
+          <h2 className="text-3xl font-bold leading-[1.15] text-[#0d1627] sm:whitespace-nowrap sm:text-4xl md:text-[2.75rem]">
+            Built around the way your business works
           </h2>
         </div>
 

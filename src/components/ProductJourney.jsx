@@ -43,9 +43,9 @@ export const ProductJourney = () => {
         {/* ── Heading & Subtitle (Shifted Upwards) ── */}
         <div className="mt-3.5 text-center sm:mt-4">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-            One conversation A
+            One conversation
             <br />
-            complete customer journey
+            A complete customer journey
           </h2>
 
           <p className="mx-auto mt-2.5 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">

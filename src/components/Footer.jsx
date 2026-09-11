@@ -11,11 +11,9 @@ import stravedaLogo from "../assets/Straveda logo.png";
 const footerLinks = {
   Explore: [
     { label: "Home", id: "hero" },
-    { label: "The Problem", id: "problem" },
-    { label: "Why Sandesa", id: "why-sandesa" },
-    { label: "See It in Action", id: "see-in-action" },
-    { label: "Supported Industries", id: "industries" },
+    { label: "Product", id: "product-journey" },
     { label: "Use Cases", id: "use-cases" },
+    { label: "Industries", id: "industries" },
   ],
 
   Resources: [
@@ -77,7 +75,7 @@ const Footer = () => {
 
       
         {/* ── Back To Top ── */}
-<div className="mt-4 flex justify-end">
+<div className="mt-3 flex justify-end">
   <button
     type="button"
     onClick={scrollToTop}
@@ -89,14 +87,14 @@ const Footer = () => {
 </div>
 
         {/* ── Main Footer Grid ── */}
-        <div className="grid grid-cols-1 gap-6 border-b border-[#d8e6fe] pb-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+        <div className="grid grid-cols-1 gap-5 border-b border-[#d8e6fe] pb-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
 
           {/* ── Column 1: Brand & Bio ── */}
           <div className="lg:col-span-1">
             <button
               type="button"
               onClick={() => scrollToSection("hero")}
-              className="mb-4 flex cursor-pointer items-center gap-2.5"
+              className="mb-3 flex cursor-pointer items-center gap-2.5"
             >
               <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_2px_8px_rgba(37,99,235,0.15)]">
                 <img
@@ -117,7 +115,7 @@ const Footer = () => {
             </p>
 
             {/* ── Social Icons ── */}
-            <div className="mt-5 flex items-center gap-2.5">
+            <div className="mt-4 flex items-center gap-2.5">
               {socials.map(({ Icon, label, href, color }) => (
                 <a
                   key={label}
@@ -136,11 +134,11 @@ const Footer = () => {
           {/* ── Columns: Links Sections ── */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
+              <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
                 {category}
               </h4>
 
-              <ul className="space-y-2.5">
+              <ul className="space-y-2">
                 {links.map(({ label, id }) => (
                   <li key={label}>
                     <button
@@ -158,15 +156,17 @@ const Footer = () => {
 
           {/* ── Column 5: Contact Us ── */}
           <div id="contact-us">
-            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
+            <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
               Contact Us
             </h4>
 
-            <div className="space-y-3.5">
+            <div className="space-y-3">
 
               {/* ── Email ── */}
               <a
-                href="mailto:contact.sandesaai@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact.sandesaai@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start gap-2.5 text-[13px] text-[#64748b] transition-colors hover:text-[#0a1128]"
               >
                 <Mail
@@ -194,23 +194,23 @@ const Footer = () => {
         </div>
 
         {/* ── Bottom Row: Copyright & Legal Links ── */}
-        <div className="flex flex-col gap-4 pt-6 text-[11.5px] font-medium text-[#64748b] sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 py-4 text-[11.5px] font-medium text-[#64748b] sm:flex-row sm:items-center sm:justify-between">
   <p>© {new Date().getFullYear()} Sandesa. All Rights Reserved.</p>
 
  <a
   href="https://stravedatech.com/"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex flex-col items-center justify-center"
+  className="flex items-center justify-center gap-2"
 >
+  <span className="text-[13px] font-medium tracking-wide text-[#64748b]">
+    Powered by
+  </span>
   <img
     src={stravedaLogo}
     alt="Straveda"
-    className="h-auto w-[120px] object-contain"
+    className="h-auto w-[100px] object-contain"
   />
-  <span className="-mt-1 text-[13px] font-medium tracking-wide text-[#64748b]">
-    Powered by
-  </span>
 </a>
 
   <div className="flex flex-wrap items-center gap-6">

@@ -119,8 +119,8 @@ const Analytics = () => {
 
 
           <p className="mt-3 text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
-            Conversations, leads, qualified leads, appointments, pipeline, AI
-            resolution and response time — in one view.
+            Conversations, leads, appointments, pipeline, AI
+            resolution and response time in one view.
           </p>
         </div>
 

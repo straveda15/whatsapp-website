@@ -18,9 +18,7 @@ export const WorkflowBuilder = () => {
         {/* ── Heading ── */}
         <div className="text-center sm:mt-5">
           <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
-            Build the workflow once
-            <br />
-            Let it run every day
+            Build the workflow once Let it run every day
           </h2>
         </div>
 
@@ -42,7 +40,7 @@ export const WorkflowBuilder = () => {
               <span className="h-2.5 w-2.5 rounded-full bg-[#00b894]" />
 
               <span className="ml-2 text-[11.5px] font-semibold text-[#0a1128] sm:text-[12px]">
-                Real Estate — Lead Journey
+                Real Estate Lead Journey
               </span>
             </div>
 

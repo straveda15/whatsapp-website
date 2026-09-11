@@ -24,6 +24,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContactUs from "./components/ContactUs";
+import { getWhatsAppLink, isMobileDevice } from "./utils/whatsapp";
 
 function App() {
   return (
@@ -55,8 +56,8 @@ function App() {
               <Footer />
 
               <a
-                href="https://wa.me/919623095766"
-                target="_blank"
+                href={getWhatsAppLink()}
+                target={isMobileDevice() ? "_self" : "_blank"}
                 rel="noopener noreferrer"
                 className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_20px_rgba(37,211,102,0.35)] transition-all duration-200 hover:scale-110"
                 aria-label="Chat on WhatsApp"
