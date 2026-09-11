@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Use Cases", href: "#use-cases" },
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Contact Us", href: "#contact-us" },
 ];
 
 const Navbar = () => {
