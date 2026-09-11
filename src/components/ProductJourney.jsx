@@ -102,7 +102,7 @@ export const ProductJourney = () => {
             return (
               <div
                 key={card.label}
-                className="group flex flex-col justify-between rounded-[22px] border border-[#e8edf4] bg-white p-7 shadow-[0_4px_24px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
+                className="group flex h-full flex-col justify-between rounded-[22px] border border-[#e8edf4] bg-white p-7 shadow-[0_4px_24px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
               >
                 <div>
                   {/* Icon & Label */}

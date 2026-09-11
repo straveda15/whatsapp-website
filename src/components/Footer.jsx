@@ -192,7 +192,7 @@ const Footer = () => {
   href="https://stravedatech.com/"
   target="_blank"
   rel="noopener noreferrer"
-  className="mt-2 flex w-full max-w-[270px] flex-col items-center justify-center transition-all duration-200 hover:scale-[1.02]"
+  className="mt-2 flex w-full max-w-[270px] flex-col items-center justify-center"
 >
   <div className="flex w-[250px] items-center justify-center">
     <img
