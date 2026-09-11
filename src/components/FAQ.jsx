@@ -92,7 +92,7 @@ const FAQ = () => {
                       type="button"
                       aria-expanded={isOpen}
                       onClick={() => handleToggle(index)}
-                      className="flex w-full cursor-pointer items-center justify-between py-3.5 text-left text-[13.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
+                      className="flex w-full cursor-pointer items-center justify-between py-3.5 text-left text-[15.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
                     >
                       <span>{faq.question}</span>
 

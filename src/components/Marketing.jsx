@@ -131,11 +131,12 @@ export const Marketing = () => {
               </h3>
 
               <button
-                type="button"
-                className="rounded-full bg-[#2563eb] px-4 py-1.5 text-[12px] font-medium text-white shadow-sm transition-all hover:bg-[#1d4ed8] active:scale-95"
-              >
-                New campaign
-              </button>
+  type="button"
+  onClick={() => alert("New campaign button clicked!")}
+  className="rounded-full bg-[#2563eb] px-4 py-1.5 text-[12px] font-medium text-white shadow-sm transition-all hover:bg-[#1d4ed8] active:scale-95"
+>
+  New campaign
+</button>
             </div>
 
             {/* Campaign Rows */}

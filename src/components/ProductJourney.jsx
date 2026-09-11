@@ -127,14 +127,29 @@ export const ProductJourney = () => {
                 </div>
 
                 {/* Explore Link */}
-                <div className="mt-6 flex items-center gap-1.5 self-start text-[13px] font-semibold text-[#0a1128] transition-colors duration-200 group-hover:text-[#2563eb]">
-                  <span>Explore</span>
-                  <ArrowRight
-                    size={14}
-                    strokeWidth={2.4}
-                    className="transition-transform duration-200 group-hover:translate-x-1"
-                  />
-                </div>
+                <button
+  type="button"
+  onClick={() => {
+    const sectionId = {
+      ATTRACT: "marketing",
+      CONVERT: "ai-agent",
+      SERVE: "human-ai",
+    }[card.label];
+
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+  className="mt-6 flex items-center gap-1.5 self-start text-[13px] font-semibold text-[#0a1128] transition-colors duration-200 group-hover:text-[#2563eb]"
+>
+  <span>Explore</span>
+  <ArrowRight
+    size={14}
+    strokeWidth={2.4}
+    className="transition-transform duration-200 group-hover:translate-x-1"
+  />
+</button>
               </div>
             );
           })}

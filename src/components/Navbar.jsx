@@ -237,12 +237,12 @@ const today = new Date().toISOString().split("T")[0];
             {/* ── Demo Form ── */}
 
             <form
-              className="mt-6 space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-
+  className="space-y-6"
+  onSubmit={(e) => {
+    e.preventDefault();
+    alert("Live Demo request submitted!");
+  }}
+>
               {/* Name */}
 
               <input
