@@ -25,6 +25,12 @@ const Navbar = () => {
 
 useEffect(() => {
   if (showDemo) {
+    setSelectedTime(new Date().toTimeString().slice(0, 5));
+  }
+}, [showDemo]);
+
+useEffect(() => {
+  if (showDemo) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "";
@@ -105,7 +111,7 @@ const today = new Date().toISOString().split("T")[0];
             {/* Brand Name */}
 
             <span className="text-[23px] sm:text-[25px] font-extrabold tracking-tight text-[#0a1128]">
-              Sandesa<span className="text-[#2563eb]">.</span>
+              Sandesa<span className="text-[#2563eb]"></span>
             </span>
           </button>
 

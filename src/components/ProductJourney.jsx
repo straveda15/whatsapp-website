@@ -5,21 +5,21 @@ const cards = [
   {
     icon: Megaphone,
     label: "ATTRACT",
-    title: "Turn attention into conversations.",
+    title: "Turn attention into conversations",
     description:
       "Campaigns, lead capture, segmentation, personalization, retargeting and automated follow-ups.",
   },
   {
     icon: Sparkles,
     label: "CONVERT",
-    title: "Turn conversations into customers.",
+    title: "Turn conversations into customers",
     description:
       "AI qualification, lead scoring, appointments, follow-ups, routing and human handoff.",
   },
   {
     icon: MessageSquare,
     label: "SERVE",
-    title: "Turn support into a better experience.",
+    title: "Turn support into a better experience",
     description:
       "FAQs, appointments, orders, payments, service requests, notifications and customer updates.",
   },
@@ -43,9 +43,9 @@ export const ProductJourney = () => {
         {/* ── Heading & Subtitle (Shifted Upwards) ── */}
         <div className="mt-3.5 text-center sm:mt-4">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-            One conversation. A
+            One conversation A
             <br />
-            complete customer journey.
+            complete customer journey
           </h2>
 
           <p className="mx-auto mt-2.5 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">

@@ -47,7 +47,7 @@ export const SeeInAction = () => {
           {/* ── Left Content ── */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[38px] md:leading-tight">
-              See Sandesa in action.
+              See Sandesa in action
             </h2>
 
             <p className="mt-3.5 max-w-md text-[14px] leading-relaxed text-[#64748b] sm:text-[14.5px]">

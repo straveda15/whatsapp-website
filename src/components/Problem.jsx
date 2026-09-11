@@ -43,9 +43,9 @@ const ProblemSection = () => {
          <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
           Your customers are
             <br />
-            already on WhatsApp.
+            already on WhatsApp
             <br />
-            Your business should be too.
+            Your business should be too
           </h2>
 
           {/* Subtitle */}

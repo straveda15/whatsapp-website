@@ -114,7 +114,7 @@ const Analytics = () => {
   <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] lg:text-[44px]">
     Know what your conversations
     <br className="hidden sm:inline" />{" "}
-    are actually doing.
+    are actually doing
   </h2>
 
 

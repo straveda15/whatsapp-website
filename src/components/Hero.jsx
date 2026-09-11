@@ -33,7 +33,7 @@ const Hero = () => {
           <h1 className="mt-5 sm:mt-6 text-left text-[38px] font-bold leading-[1.08] tracking-tight text-[#0a1128] sm:text-[48px] lg:text-[58px]">
             Your AI Team
             <br />
-            on <span className="text-[#2563eb]">WhatsApp.</span>
+            on <span className="text-[#2563eb]">WhatsApp</span>
           </h1>
 
           {/* Description */}

@@ -45,7 +45,7 @@ const WhySandesa = () => {
 
         {/* ── Heading ── */}
         <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-tight text-[#0f172a] sm:text-[38px] lg:text-[44px]">
-          Why teams choose Sandesa.
+          Why teams choose Sandesa
         </h2>
 
         {/* Feature Cards */}

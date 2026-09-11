@@ -23,13 +23,13 @@ export const FinalCTA = () => {
         <h2 className="mx-auto max-w-lg text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[38px] md:text-[44px]">
           Your customers
           <br />
-          are already talking.
+          are already talking
           <br />
           It's time your business
           <br />
-          started listening — and
+          started listening and
           <br />
-          acting.
+          acting
         </h2>
 
         {/* ── Subtitle ── */}
