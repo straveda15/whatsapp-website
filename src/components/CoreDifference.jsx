@@ -14,7 +14,7 @@ export const CoreDifference = () => {
   return (
     <section
       id="core-difference"
-      className="w-full bg-[#0c182e] py-14 px-4 sm:py-18 sm:px-6 lg:py-24 lg:px-8 border-y border-[#182947]"
+      className="w-full bg-[#0c182e] py-8 px-4 sm:py-10 sm:px-6 lg:py-14 lg:px-8 border-y border-[#182947]"
     >
       <div className="mx-auto max-w-6xl">
 
@@ -27,23 +27,19 @@ export const CoreDifference = () => {
 
         {/* ── Heading & Subtitle (Exact Mobile Typography) ── */}
         <div className="mt-6 text-center">
-          <h2 className="mx-auto max-w-xl text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[36px] md:text-[42px]">
-            Don't just
-            <br />
-            automate replies
-            <br />
-            Automate what happens
-            <br />
-            next
-          </h2>
+          <h2 className="mx-auto max-w-[850px] text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[36px] md:text-[42px]">
+  Don't just automate replies
+  <br />
+  Automate what happens next
+</h2>
 
-          <p className="mx-auto mt-4 text-[14px] font-normal text-[#8ba2c7] sm:text-[15px]">
+          <p className="mx-auto mt-2 text-[14px] font-normal text-[#8ba2c7] sm:text-[15px]">
             Talk less. Get more done.
           </p>
         </div>
 
         {/* ── 7 Step Cards (Full width on Mobile, 4-Cols on Desktop) ── */}
-        <div className="mt-10 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map(({ step, title }) => (
             <div
               key={step}

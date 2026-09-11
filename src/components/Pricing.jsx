@@ -128,15 +128,17 @@ export const Pricing = () => {
               {/* CTA Button */}
               <div className="mt-6 pt-2">
                 <a
-                  href="#contact"
-                  className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
-                    plan.recommended
-                      ? "bg-[#2563eb] text-white shadow-[0_6px_20px_rgba(37,99,235,0.30)] hover:bg-[#1d4ed8]"
-                      : "border border-[#e2e8f0] bg-white text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1] hover:bg-[#f8fafc]"
-                  }`}
-                >
-                  Talk to sales
-                </a>
+  href="https://wa.me/919623095766"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
+    plan.recommended
+      ? "bg-[#2563eb] text-white shadow-[0_6px_20px_rgba(37,99,235,0.30)] hover:bg-[#1d4ed8]"
+      : "border border-[#e2e8f0] bg-white text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1] hover:bg-[#f8fafc]"
+  }`}
+>
+  Talk to sales
+</a>
               </div>
             </div>
           ))}

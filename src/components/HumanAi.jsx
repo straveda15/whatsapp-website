@@ -31,7 +31,7 @@ export const HumanAI = () => {
         </div>
 
         {/* ── Heading ── */}
-        <div className="mt-4 text-center sm:mt-5">
+        <div className="text-center sm:mt-5">
           <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
             AI when it's repetitive
             <br />
