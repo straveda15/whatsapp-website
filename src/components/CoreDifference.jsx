@@ -30,11 +30,11 @@ export const CoreDifference = () => {
           <h2 className="mx-auto max-w-xl text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[36px] md:text-[42px]">
             Don't just
             <br />
-            automate replies.
+            automate replies
             <br />
             Automate what happens
             <br />
-            next.
+            next
           </h2>
 
           <p className="mx-auto mt-4 text-[14px] font-normal text-[#8ba2c7] sm:text-[15px]">

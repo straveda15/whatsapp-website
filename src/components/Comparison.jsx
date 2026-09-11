@@ -46,9 +46,9 @@ export const Comparison = () => {
 
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px]">
-            WhatsApp is the channel.
+            WhatsApp is the channel
             <br />
-            Sandesa is the system behind it.
+            Sandesa is the system behind it
           </h2>
         </div>
 

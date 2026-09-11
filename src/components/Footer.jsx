@@ -1,7 +1,8 @@
 import React from "react";
-import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowUp, Mail, Phone } from "lucide-react";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logosandesa.png";
+import stravedaLogo from "../assets/Straveda Logo.png"
 
 const footerLinks = {
   Explore: [
@@ -111,7 +112,7 @@ const Footer = () => {
               </div>
 
               <span className="text-xl font-bold tracking-tight text-[#0a1128]">
-                Sandesa
+                Sandesa<span className="text-[#2563eb]"></span>
               </span>
             </button>
 
@@ -186,16 +187,26 @@ const Footer = () => {
                 <span>+91 76665 34888</span>
               </a>
 
-              {/* Location */}
-              <div className="flex items-start gap-2.5 text-[13px] leading-relaxed text-[#64748b]">
-                <MapPin size={15} className="mt-0.5 shrink-0 text-[#2563eb]" />
-                <span>
-                  Pune, Maharashtra
-                  <br />
-                  411001, India
-                </span>
-              </div>
-            </div>
+                {/* Powered By Straveda */}
+<a
+  href="https://stravedatech.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-2 flex w-full max-w-[270px] flex-col items-center justify-center transition-all duration-200 hover:scale-[1.02]"
+>
+  <div className="flex w-[250px] items-center justify-center">
+    <img
+      src={stravedaLogo}
+      alt="Straveda"
+      className="h-auto w-[180px] object-contain"
+    />
+  </div>
+
+  <span className=" text-[13px] font-medium tracking-wide text-[#64748b]">
+    Powered by
+  </span>
+</a>
+  </div>
           </div>
 
         </div>

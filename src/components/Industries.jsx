@@ -59,7 +59,7 @@ const Industries = () => {
           <h2 className="text-3xl font-bold leading-[1.15] text-[#0d1627] sm:text-4xl md:text-[2.75rem]">
             Built around the way 
             <br/>
-            your business works.
+            your business works
           </h2>
         </div>
 

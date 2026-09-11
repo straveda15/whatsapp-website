@@ -68,7 +68,7 @@ const FAQ = () => {
         {/* ── Heading ── */}
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-            Questions, answered.
+            Questions, answered
           </h2>
         </div>
 

@@ -18,9 +18,9 @@ export const WorkflowBuilder = () => {
         {/* ── Heading ── */}
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
-            Build the workflow once.
+            Build the workflow once
             <br />
-            Let it run every day.
+            Let it run every day
           </h2>
         </div>
 

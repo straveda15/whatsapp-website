@@ -29,7 +29,7 @@ function ContactUs() {
               {/* Left Content */}
               <div className="pt-2">
                 <h2 className="text-4xl font-bold tracking-tight text-[#0a1128] sm:text-5xl">
-                  Let’s Talk About Your Business.
+                  Let’s Talk About Your Business
                 </h2>
 
                 <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-500">
@@ -112,9 +112,10 @@ function ContactUs() {
                 <form
                   className="space-y-3"
                   onSubmit={(e) => {
-                    e.preventDefault();
-                    alert("Your message has been submitted successfully!");
-                  }}
+  e.preventDefault();
+  alert("Your message has been submitted successfully!");
+  e.target.reset();
+}}
                 >
                   {/* Name */}
                   <div>

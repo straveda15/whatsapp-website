@@ -68,7 +68,7 @@ export const Pricing = () => {
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
             Plans that grow with
             <br />
-            your conversations.
+            your conversations
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
