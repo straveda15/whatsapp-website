@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowUp, Mail, Phone } from "lucide-react";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logosandesa.png";
-import stravedaLogo from "../assets/Straveda Logo.png"
+import stravedaLogo from "../assets/Straveda logo.png"
 
 const footerLinks = {
   Explore: [
