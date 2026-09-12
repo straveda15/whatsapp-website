@@ -18,7 +18,7 @@ export const FinalCTA = () => {
         }}
       />
 
-      <div className="-mt-8 relative mx-auto w-full max-w-6xl text-center">
+      <div className="relative mx-auto w-full max-w-6xl text-center">
         {/* ── Heading ── */}
         <h2 className="mx-auto max-w-[1200px] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[42px] md:leading-[1.18]">
           Your customers are already talking

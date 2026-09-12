@@ -18,7 +18,7 @@ export const CoreDifference = () => {
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
-        <div className="relative -mt-7 mb-6 flex justify-center">
+        <div className="relative sm:-mt-7 mb-6 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#1e345b] bg-[#112344] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8da6d8] sm:px-4 sm:text-[10.5px]">
             CORE DIFFERENCE
           </span>

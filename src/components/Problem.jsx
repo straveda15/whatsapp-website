@@ -61,7 +61,7 @@ const ProblemSection = () => {
           {problems.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex flex-col items-start rounded-[24px] border border-[#f1f5f9] bg-white p-6.5 text-left shadow-[0_10px_35px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(37,99,235,0.08)]"
+              className="flex h-full flex-col items-start rounded-[24px] border border-[#f1f5f9] bg-white p-6.5 text-left shadow-[0_10px_35px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(37,99,235,0.08)]"
             >
               {/* Circular Icon */}
               <span className="grid h-11 w-11 place-items-center rounded-full bg-[#eff6ff] text-[#2563eb]">
@@ -74,7 +74,7 @@ const ProblemSection = () => {
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-[13.5px] leading-relaxed text-[#64748b]">
+              <p className="mt-2 flex-1 text-[13.5px] leading-relaxed text-[#64748b]">
                 {description}
               </p>
             </div>

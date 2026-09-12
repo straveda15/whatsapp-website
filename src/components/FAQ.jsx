@@ -48,17 +48,17 @@ const FAQ = () => {
       className="w-full border-t border-[#e2e8f0] bg-white px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-10"
     >
       <div className="mx-auto w-full max-w-6xl">
-        {/* ── Top Pill Badge ── */}
-        <div className="mt-0 flex justify-start sm:-mt-4">
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
-            FAQ
-          </span>
-        </div>
-
         {/* ── FAQ Content ── */}
-        <div className="mt-4 grid items-start gap-8 sm:gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
+        <div className="mt-0 grid items-start gap-8 sm:gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
           {/* ── Left Heading ── */}
           <div className="text-left">
+            {/* ── Top Pill Badge ── */}
+            <div className="mb-5 flex justify-start">
+              <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
+                FAQ
+              </span>
+            </div>
+
             <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
               Frequently
               <br />
@@ -71,7 +71,7 @@ const FAQ = () => {
           </div>
 
           {/* ── FAQ List ── */}
-          <div className="w-full min-w-0">
+          <div className="-mt-3 w-full min-w-0">
             <div className="space-y-1.5 sm:space-y-2.5">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
