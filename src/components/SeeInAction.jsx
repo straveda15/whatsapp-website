@@ -39,21 +39,21 @@ export const SeeInAction = () => {
       id="see-in-action"
       className="w-full bg-[#f8fafc] py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="-mt-8 mx-auto max-w-6xl">
         
         {/* ── Main Container Card ── */}
         <div className="grid grid-cols-1 items-center gap-8 rounded-[30px] border border-[#e2e8f0] bg-white p-6 shadow-[0_8px_30px_rgba(15,23,42,0.03)] sm:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12">
           
           {/* ── Left Content ── */}
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[38px] md:leading-tight">
-              See Sandesa in action
-            </h2>
+            <h2 className="-mt-3 text-3xl font-bold tracking-tight text-[#0a1128] sm:-mt-4 sm:text-4xl md:text-[42px] md:leading-[1.18]">
+  See Sandesa in action
+</h2>
 
-            <p className="mt-3.5 max-w-md text-[14px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
-              Watch a lead go from “Hi” to “qualified” without a salesperson
-              touching the conversation.
-            </p>
+            <p className="mt-3.5 max-w-md text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+  Watch a lead go from “Hi” to “qualified” without a salesperson
+  touching the conversation.
+</p>
 
             {/* CTA Buttons */}
             <div className="mt-6 flex flex-wrap items-center gap-3">

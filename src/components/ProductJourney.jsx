@@ -35,7 +35,7 @@ export const ProductJourney = () => {
         
         {/* ── Top Pill Badge (Shifted Upwards) ── */}
         <div className="flex justify-center">
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+          <span className="relative z-10 -mt-7 inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             PRODUCT JOURNEY
           </span>
         </div>
@@ -48,10 +48,10 @@ export const ProductJourney = () => {
             A complete customer journey
           </h2>
 
-          <p className="mx-auto mt-2.5 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
-            Sandesa doesn't just send messages. It helps your business move
-            conversations forward.
-          </p>
+          <p className="mx-auto mt-2.5 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+  Sandesa doesn't just send messages. It helps your business move
+  conversations forward.
+</p>
         </div>
 
         {/* ── Flow Diagram ── */}
@@ -102,12 +102,12 @@ export const ProductJourney = () => {
             return (
               <div
                 key={card.label}
-                className="group flex h-full flex-col justify-between rounded-[22px] border border-[#e8edf4] bg-white p-7 shadow-[0_4px_24px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
+                className="group flex h-full flex-col justify-between rounded-[22px] border border-[#e8edf4] bg-white p-4 shadow-[0_4px_24px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
               >
                 <div>
                   {/* Icon & Label */}
                   <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#0a1128] text-white">
+                    <div className="flex h-10 w-9 items-center justify-center rounded-xl bg-[#0a1128] text-white">
                       <Icon size={17} strokeWidth={2.2} />
                     </div>
                     <span className="text-[11.5px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
@@ -141,7 +141,7 @@ export const ProductJourney = () => {
       block: "start",
     });
   }}
-  className="mt-6 flex items-center gap-1.5 self-start text-[13px] font-semibold text-[#0a1128] transition-colors duration-200 group-hover:text-[#2563eb]"
+  className="flex items-center gap-1.5 self-start text-[13px] font-semibold text-[#0a1128] transition-colors duration-200 group-hover:text-[#2563eb]"
 >
   <span>Explore</span>
   <ArrowRight

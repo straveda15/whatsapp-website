@@ -31,9 +31,9 @@ function ContactUs() {
               {/* Left Content */}
               <div className="pt-2">
 
-                <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-500">
-                  Have questions about Sandesa? Get in touch with our team and
-                  discover how we can help your business grow.
+                <p className="mt-4 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+                  Get in touch with our team and
+                  discover how we can help your business grow.Have questions about Sandesa? 
                 </p>
 
                 {/* Contact Details */}

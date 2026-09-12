@@ -18,20 +18,19 @@ export const FinalCTA = () => {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl text-center">
+      <div className="-mt-8 relative mx-auto max-w-6xl text-center">
         {/* ── Heading (Exact Mobile Line Breaks) ── */}
-        <h2 className="mx-auto max-w-[1200px] text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[38px] md:text-[44px]">
-          Your customers are already talking
-          <br />
-          It's time your business started listening and acting
-        </h2>
+        <h2 className="mx-auto max-w-[1200px] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[42px] md:leading-[1.18]">
+  Your customers are already talking
+  <br />
+  It's time your business started listening and acting
+</h2>
 
         {/* ── Subtitle ── */}
-        <p className="mx-auto mt-4 max-w-sm text-[13.5px] leading-relaxed text-[#94a3b8] sm:max-w-md sm:text-[15px]">
-          Build your first automated WhatsApp journey with
-          <br className="sm:hidden" /> Sandesa.
-        </p>
-
+        <p className="mx-auto mt-4 max-w-sm text-[14.5px] leading-[1.65] text-[#94a3b8] sm:max-w-md sm:text-[15.5px]">
+  Build your first automated WhatsApp journey with
+  <br className="sm:hidden" /> Sandesa.
+</p>
         {/* ── Action Buttons (Side by Side in Mobile) ── */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           {/* 1. Primary White Button */}

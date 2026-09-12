@@ -103,19 +103,17 @@ const Analytics = () => {
       <div className="mx-auto max-w-6xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             ANALYTICS
           </span>
         </div>
 
         {/* ── Section Heading & Subtitle ── */}
-       <div className="mx-auto mt-4 flex max-w-2xl flex-col items-center text-center sm:mt-5">
-  <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] lg:text-[44px]">
-    Know what your conversations
-    <br className="hidden sm:inline" />{" "}
-    are actually doing
-  </h2>
+       <div className="mx-auto mt-4 flex w-full flex-col items-center text-center sm:mt-5">
+  <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+  Know what your conversations are actually doing
+</h2>
 
 
           <p className="mt-3 text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">

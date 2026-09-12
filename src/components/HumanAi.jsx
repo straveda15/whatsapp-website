@@ -24,7 +24,7 @@ export const HumanAI = () => {
       <div className="mx-auto max-w-5xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             HUMAN + AI
           </span>
@@ -34,7 +34,6 @@ export const HumanAI = () => {
         <div className="text-center sm:mt-5">
           <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
             AI when it's repetitive
-            <br />
             Humans when it matters
           </h2>
         </div>

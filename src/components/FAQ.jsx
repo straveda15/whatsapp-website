@@ -14,16 +14,6 @@ const faqs = [
       "No. Sandesa is designed to be easy to use. You can create workflows, manage conversations, and automate customer interactions without advanced technical knowledge.",
   },
   {
-    question: "Can multiple employees use Sandesa?",
-    answer:
-      "Yes. Multiple employees can use Sandesa through team inboxes and shared workspaces, making it easy for teams to manage customer conversations together.",
-  },
-  {
-    question: "Can AI transfer conversations to humans?",
-    answer:
-      "Yes. Sandesa AI can automatically hand over conversations to a human team member when a request is complex or requires personal assistance.",
-  },
-  {
     question: "Can I run WhatsApp campaigns?",
     answer:
       "Yes. Sandesa supports WhatsApp campaigns that help businesses engage customers, send updates, and follow up with leads at the right time.",
@@ -55,11 +45,11 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="w-full border-t border-[#e2e8f0] bg-white px-5 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
+      className="w-full border-t border-[#e2e8f0] bg-white px-5 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-10"
     >
       <div className="mx-auto max-w-[1240px]">
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-4 flex justify-start">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             FAQ
           </span>
@@ -74,6 +64,9 @@ const FAQ = () => {
               <br />
               Asked Questions
             </h2>
+            <p className="mt-4 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+                  Everything you need to know about Sandesa.
+                </p>
           </div>
 
           {/* ── FAQ List ── */}
@@ -114,7 +107,7 @@ const FAQ = () => {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="text-[13px] leading-relaxed text-[#64748b]">
+                        <p className="text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
                           {faq.answer}
                         </p>
                       </div>
