@@ -39,7 +39,7 @@ export const SeeInAction = () => {
       id="see-in-action"
       className="w-full bg-[#f8fafc] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
-      <div className="-mt-8 mx-auto w-full max-w-6xl">
+      <div className="mt-0 mx-auto w-full max-w-6xl -mt-8">
         {/* ── Main Container Card ── */}
         <div className="grid grid-cols-1 items-center gap-7 rounded-[30px] border border-[#e2e8f0] bg-white p-5 shadow-[0_8px_30px_rgba(15,23,42,0.03)] sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-12 lg:p-12">
           {/* ── Left Content ── */}
