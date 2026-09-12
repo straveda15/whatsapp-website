@@ -1,5 +1,5 @@
 import React from "react";
-import { Bot, Sparkles, Users, Check, ClipboardList, Calendar } from "lucide-react";
+import { Bot, Zap, Users, Check, ClipboardList, Calendar } from "lucide-react";
 
 // WhatsApp Style Green Outline Bubble Icon
 const WhatsAppIcon = () => (
@@ -37,7 +37,7 @@ const features = [
     desc: "Understand natural customer conversations.",
   },
   {
-    icon: Sparkles,
+    icon: Zap,
     title: "Act",
     desc: "Capture data, qualify leads and trigger the next step.",
   },
