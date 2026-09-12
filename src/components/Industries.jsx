@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Home,
   GraduationCap,
@@ -45,41 +46,41 @@ const Industries = () => {
   return (
     <section
       id="industries"
-      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
+      className="w-full bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Content ── */}
-        <div className="-mt-8 mx-auto flex max-w-4xl flex-col items-center gap-3 text-center">
+        <div className="-mt-8 mx-auto flex w-full max-w-4xl flex-col items-center gap-3 text-center">
           {/* Badge */}
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
-  INDUSTRIES
-</span>
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
+            INDUSTRIES
+          </span>
 
           {/* Heading */}
-          <h2 className="text-3xl font-bold leading-[1.15] text-[#0d1627] sm:whitespace-nowrap sm:text-4xl md:text-[2.75rem]">
+          <h2 className="text-3xl font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-4xl md:whitespace-nowrap md:text-[42px]">
             Built around the way your business works
           </h2>
         </div>
 
         {/* ── Industry Cards ── */}
-        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:mt-9 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-5">
           {industries.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex items-center gap-4 rounded-2xl border border-[#dbe3ee] bg-white p-5 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/25 hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
+              className="flex min-w-0 items-center gap-4 rounded-2xl border border-[#dbe3ee] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/25 hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)] sm:p-5"
             >
               {/* Icon */}
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#eff6ff] text-[#1d4ed8] sm:h-11 sm:w-11">
                 <Icon className="h-5 w-5" strokeWidth={2} />
               </span>
 
               {/* Text */}
               <div className="min-w-0">
-                <p className="font-semibold text-[#0d1627]">
+                <p className="text-[14px] font-semibold text-[#0d1627]">
                   {title}
                 </p>
 
-                <p className="text-xs text-[#64748b]">
+                <p className="text-[12px] text-[#64748b] sm:text-xs">
                   {description}
                 </p>
               </div>

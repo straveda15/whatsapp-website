@@ -30,7 +30,6 @@ const socials = [
     href: "https://www.linkedin.com/showcase/sandesa-ai/",
     color: "text-[#0A66C2]",
   },
-
   {
     Icon: FaInstagram,
     label: "Instagram",
@@ -70,25 +69,22 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full border-t border-[#d8e6fe] bg-[#f0f6ff] px-5  text-[#0a1128] sm:px-8 lg:px-14">
-      <div className="relative mx-auto max-w-[1240px]">
-
-      
+    <footer className="relative w-full border-t border-[#d8e6fe] bg-[#f0f6ff] px-4 text-[#0a1128] sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-6xl">
         {/* ── Back To Top ── */}
-<div className="mt-3 flex justify-end">
-  <button
-    type="button"
-    onClick={scrollToTop}
-    className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[#64748b]"
-  >
-    <ArrowUp size={14} />
-    <span>Back to Top</span>
-  </button>
-</div>
+        <div className="mt-3 flex justify-end">
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="inline-flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#64748b] sm:text-[11px]"
+          >
+            <ArrowUp size={14} />
+            <span>Back to Top</span>
+          </button>
+        </div>
 
         {/* ── Main Footer Grid ── */}
-        <div className="grid grid-cols-1 gap-5 border-b border-[#d8e6fe] pb-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
-
+        <div className="grid grid-cols-1 gap-5 border-b border-[#d8e6fe] pb-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-5 lg:gap-8">
           {/* ── Column 1: Brand & Bio ── */}
           <div className="lg:col-span-1">
             <button
@@ -96,7 +92,7 @@ const Footer = () => {
               onClick={() => scrollToSection("hero")}
               className="mb-3 flex cursor-pointer items-center gap-2.5"
             >
-              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_2px_8px_rgba(37,99,235,0.15)]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_2px_8px_rgba(37,99,235,0.15)]">
                 <img
                   src={logo}
                   alt="Sandesa"
@@ -105,13 +101,13 @@ const Footer = () => {
               </div>
 
               <span className="text-xl font-bold tracking-tight text-[#0a1128]">
-                Sandesa<span className="text-[#2563eb]"></span>
+                Sandesa<span className="text-[#2563eb]">.</span>
               </span>
             </button>
 
             <p className="max-w-[240px] text-[13px] leading-relaxed text-[#64748b]">
-              AI-powered WhatsApp automation that turns conversations
-              into pipeline, customers, and revenue.
+              AI-powered WhatsApp automation that turns conversations into
+              pipeline, customers, and revenue.
             </p>
 
             {/* ── Social Icons ── */}
@@ -134,7 +130,7 @@ const Footer = () => {
           {/* ── Columns: Links Sections ── */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
+              <h4 className="mb-3 text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#2563eb] sm:text-[11px]">
                 {category}
               </h4>
 
@@ -156,12 +152,11 @@ const Footer = () => {
 
           {/* ── Column 5: Contact Us ── */}
           <div id="contact-us">
-            <h4 className="mb-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
+            <h4 className="mb-3 text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#2563eb] sm:text-[11px]">
               Contact Us
             </h4>
 
             <div className="space-y-3">
-
               {/* ── Email ── */}
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=contact.sandesaai@gmail.com"
@@ -174,7 +169,9 @@ const Footer = () => {
                   className="mt-0.5 shrink-0 text-[#2563eb]"
                 />
 
-                <span>contact.sandesaai@gmail.com</span>
+                <span className="break-all">
+                  contact.sandesaai@gmail.com
+                </span>
               </a>
 
               {/* ── Phone ── */}
@@ -194,40 +191,42 @@ const Footer = () => {
         </div>
 
         {/* ── Bottom Row: Copyright & Legal Links ── */}
-        <div className="flex flex-col gap-3 py-4 text-[11.5px] font-medium text-[#64748b] sm:flex-row sm:items-center sm:justify-between">
-  <p>© {new Date().getFullYear()} Sandesa. All Rights Reserved.</p>
+        <div className="flex flex-col gap-3 py-4 text-[11px] font-medium text-[#64748b] sm:flex-row sm:items-center sm:justify-between sm:text-[11.5px]">
+          <p>© {new Date().getFullYear()} Sandesa. All Rights Reserved.</p>
 
- <a
-  href="https://stravedatech.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-2"
->
-  <span className="text-[13px] font-medium tracking-wide text-[#64748b]">
-    Powered by
-  </span>
-  <img
-    src={stravedaLogo}
-    alt="Straveda"
-    className="h-auto w-[100px] object-contain"
-  />
-</a>
+          <a
+            href="https://stravedatech.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            <span className="text-[12px] font-medium tracking-wide text-[#64748b] sm:text-[13px]">
+              Powered by
+            </span>
 
-  <div className="flex flex-wrap items-center gap-6">
-    <a
-      href="#privacy"
-      className="transition-colors hover:text-[#2563eb]"
-    >
-      Privacy Policy
-    </a>
-    <a
-      href="#terms"
-      className="transition-colors hover:text-[#2563eb]"
-    >
-      Terms of Service
-    </a>
-  </div>
-</div>
+            <img
+              src={stravedaLogo}
+              alt="Straveda"
+              className="h-auto w-[90px] object-contain sm:w-[100px]"
+            />
+          </a>
+
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <a
+              href="#privacy"
+              className="transition-colors hover:text-[#2563eb]"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              href="#terms"
+              className="transition-colors hover:text-[#2563eb]"
+            >
+              Terms of Service
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

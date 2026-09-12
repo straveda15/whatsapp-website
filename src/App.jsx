@@ -33,7 +33,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="min-h-screen bg-white font-sans antialiased text-slate-900 selection:bg-blue-600 selection:text-white">
+            <div className="min-h-screen w-full overflow-x-hidden bg-white font-sans antialiased text-slate-900 selection:bg-blue-600 selection:text-white">
               <Navbar />
               <Hero />
               <Problem />
@@ -50,7 +50,7 @@ function App() {
               <Comparison />
               <SeeInAction />
               <Pricing />
-              <ContactUs/>
+              <ContactUs />
               <FAQ />
               <FinalCTA />
               <Footer />
@@ -59,10 +59,11 @@ function App() {
                 href={getWhatsAppLink()}
                 target={isMobileDevice() ? "_self" : "_blank"}
                 rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_20px_rgba(37,211,102,0.35)] transition-all duration-200 hover:scale-110"
+                className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_20px_rgba(37,211,102,0.35)] transition-all duration-200 hover:scale-110 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
                 aria-label="Chat on WhatsApp"
               >
-                <FaWhatsapp size={30} />
+                <FaWhatsapp size={28} className="sm:hidden" />
+                <FaWhatsapp size={30} className="hidden sm:block" />
               </a>
             </div>
           }

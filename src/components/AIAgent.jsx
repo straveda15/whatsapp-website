@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Bot, Zap, Users, Check, ClipboardList, Calendar } from "lucide-react";
 
 // WhatsApp Style Green Outline Bubble Icon
@@ -50,14 +51,16 @@ const features = [
 
 export const AIAgent = () => {
   return (
-    <section id="ai-agent" className="w-full bg-white pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-18 px-4 sm:px-6 lg:px-8 border-b border-[#e2e8f0]">
-      <div className="mx-auto max-w-6xl">
+    <section
+      id="ai-agent"
+      className="w-full border-b border-[#e2e8f0] bg-white px-4 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8 lg:pt-12 lg:pb-16"
+    >
+      <div className="mx-auto w-full max-w-6xl">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-
-          {/* ================= LEFT COLUMN (TEXT SHIFTED HIGHER UP) ================= */}
-          <div className="flex flex-col items-start text-left">
+          {/* ================= LEFT COLUMN ================= */}
+          <div className="flex w-full flex-col items-start text-left">
             {/* Top Pill Badge */}
-            <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+            <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
               AI AGENT
             </span>
 
@@ -66,6 +69,8 @@ export const AIAgent = () => {
               Not just a chatbot
               <br />
               An AI agent that knows
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
               what to do next
             </h2>
 
@@ -74,7 +79,7 @@ export const AIAgent = () => {
               {features.map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="flex items-center gap-4 rounded-2xl border border-[#e8edf4] bg-white p-4.5 sm:p-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.04)]"
+                  className="flex w-full items-center gap-3 rounded-2xl border border-[#e8edf4] bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.04)] sm:gap-4 sm:p-5"
                 >
                   {/* Icon */}
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eef4ff] text-[#2563eb]">
@@ -82,11 +87,12 @@ export const AIAgent = () => {
                   </div>
 
                   {/* Text */}
-                  <div>
-                    <h3 className="text-[15px] font-medium text-[#0a1128]">
+                  <div className="min-w-0">
+                    <h3 className="text-[14px] font-medium text-[#0a1128] sm:text-[15px]">
                       {title}
                     </h3>
-                    <p className="mt-0.5 text-[12.5px] leading-relaxed text-[#64748b]">
+
+                    <p className="mt-0.5 text-[12px] leading-relaxed text-[#64748b] sm:text-[12.5px]">
                       {desc}
                     </p>
                   </div>
@@ -95,58 +101,61 @@ export const AIAgent = () => {
             </div>
           </div>
 
-          {/* ================= RIGHT COLUMN (CHAT MOCKUP + 2 INFO CARDS) ================= */}
-          <div className="flex flex-col gap-4">
-
+          {/* ================= RIGHT COLUMN ================= */}
+          <div className="flex w-full min-w-0 flex-col gap-4">
             {/* WhatsApp Chat Box */}
-            <div className="overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_20px_50px_-10px_rgba(15,23,42,0.08),0_4px_16px_rgba(15,23,42,0.02)]">
-              
+            <div className="w-full min-w-0 overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white shadow-[0_20px_50px_-10px_rgba(15,23,42,0.08),0_4px_16px_rgba(15,23,42,0.02)]">
               {/* Chat Header */}
-              <div className="flex h-[60px] items-center gap-3 bg-[#0a1128] px-5">
+              <div className="flex h-[60px] items-center gap-3 bg-[#0a1128] px-4 sm:px-5">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0e2722]">
                   <WhatsAppIcon />
                 </div>
-                <div>
-                  <p className="text-[13.5px] font-bold leading-tight text-white">
+
+                <div className="min-w-0">
+                  <p className="truncate text-[12.5px] font-bold leading-tight text-white sm:text-[13.5px]">
                     Sandesa AI · Sales Agent
                   </p>
-                  <p className="mt-0.5 text-[11px] leading-tight text-slate-400">
+
+                  <p className="mt-0.5 text-[10px] leading-tight text-slate-400 sm:text-[11px]">
                     Business Account · online
                   </p>
                 </div>
               </div>
 
               {/* Chat Messages */}
-              <div className="flex flex-col gap-3.5 bg-[#f8fafc] px-4 py-5 sm:px-5">
-                
-                {/* Message 1 (Incoming) */}
-                <div className="w-fit max-w-[82%] rounded-2xl rounded-tl-sm border border-[#e5eaf2] bg-white px-4 py-2.5 shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
-                  <p className="text-[13px] leading-relaxed text-[#0f172a]">
+              <div className="flex flex-col gap-3 bg-[#f8fafc] px-3 py-4 sm:gap-3.5 sm:px-5 sm:py-5">
+                {/* Message 1 */}
+                <div className="w-fit max-w-[88%] rounded-2xl rounded-tl-sm border border-[#e5eaf2] bg-white px-3.5 py-2.5 shadow-[0_1px_4px_rgba(0,0,0,0.02)] sm:max-w-[82%] sm:px-4">
+                  <p className="text-[12.5px] leading-relaxed text-[#0f172a] sm:text-[13px]">
                     Do you have anything ready to move in?
                   </p>
-                  <div className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-400">
+
+                  <div className="mt-1 flex items-center justify-end gap-1 text-[9px] text-slate-400 sm:text-[10px]">
                     <span>11:02</span>
                     <Check size={11} strokeWidth={2.2} />
                   </div>
                 </div>
 
-                {/* Message 2 (Outgoing WhatsApp Green) */}
-                <div className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-tr-sm bg-[#dcfce7] px-4 py-2.5">
-                  <p className="text-[13px] leading-relaxed text-[#0f172a]">
-                    Yes two ready-possession 2BHK units in Baner. Would you like to visit this weekend?
+                {/* Message 2 */}
+                <div className="ml-auto w-fit max-w-[92%] rounded-2xl rounded-tr-sm bg-[#dcfce7] px-3.5 py-2.5 sm:max-w-[85%] sm:px-4">
+                  <p className="text-[12.5px] leading-relaxed text-[#0f172a] sm:text-[13px]">
+                    Yes two ready-possession 2BHK units in Baner. Would you
+                    like to visit this weekend?
                   </p>
-                  <div className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-500">
+
+                  <div className="mt-1 flex items-center justify-end gap-1 text-[9px] text-slate-500 sm:text-[10px]">
                     <span>11:02</span>
                     <span className="font-bold text-[#2563eb]">✓✓</span>
                   </div>
                 </div>
 
-                {/* Message 3 (Incoming) */}
-                <div className="w-fit max-w-[60%] rounded-2xl rounded-tl-sm border border-[#e5eaf2] bg-white px-4 py-2.5 shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
-                  <p className="text-[13px] leading-relaxed text-[#0f172a]">
+                {/* Message 3 */}
+                <div className="w-fit max-w-[65%] rounded-2xl rounded-tl-sm border border-[#e5eaf2] bg-white px-3.5 py-2.5 shadow-[0_1px_4px_rgba(0,0,0,0.02)] sm:max-w-[60%] sm:px-4">
+                  <p className="text-[12.5px] leading-relaxed text-[#0f172a] sm:text-[13px]">
                     Saturday works.
                   </p>
-                  <div className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-400">
+
+                  <div className="mt-1 flex items-center justify-end gap-1 text-[9px] text-slate-400 sm:text-[10px]">
                     <span>11:03</span>
                     <Check size={11} strokeWidth={2.2} />
                   </div>
@@ -154,8 +163,8 @@ export const AIAgent = () => {
               </div>
 
               {/* Input Bar */}
-              <div className="flex items-center gap-2.5 border-t border-[#f1f5f9] bg-white px-4 py-3">
-                <div className="flex h-9 flex-1 items-center rounded-full border border-[#e2e8f0] px-4 text-[12px] text-slate-400">
+              <div className="flex items-center gap-2 border-t border-[#f1f5f9] bg-white px-3 py-3 sm:gap-2.5 sm:px-4">
+                <div className="flex h-9 min-w-0 flex-1 items-center rounded-full border border-[#e2e8f0] px-3 text-[11px] text-slate-400 sm:px-4 sm:text-[12px]">
                   Type a message
                 </div>
 
@@ -172,32 +181,41 @@ export const AIAgent = () => {
             </div>
 
             {/* Bottom 2 Info Cards */}
-            <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
-              
-              {/* Card 1: Captured */}
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3.5">
+              {/* Card 1 */}
               <div className="rounded-2xl border border-[#d8e6fe] bg-[#edf4fe] p-4">
-                <ClipboardList size={18} className="text-[#2563eb]" strokeWidth={2.2} />
-                <p className="mt-2.5 text-[10.5px] font-bold uppercase tracking-wider text-[#2563eb]">
+                <ClipboardList
+                  size={18}
+                  className="text-[#2563eb]"
+                  strokeWidth={2.2}
+                />
+
+                <p className="mt-2.5 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[10.5px]">
                   CAPTURED
                 </p>
-                <p className="mt-0.5 text-[13px] font-medium text-[#0a1128]">
+
+                <p className="mt-0.5 text-[12.5px] font-medium text-[#0a1128] sm:text-[13px]">
                   Requirement + budget
                 </p>
               </div>
 
-              {/* Card 2: Booked */}
+              {/* Card 2 */}
               <div className="rounded-2xl border border-[#d8e6fe] bg-[#edf4fe] p-4">
-                <Calendar size={18} className="text-[#2563eb]" strokeWidth={2.2} />
-                <p className="mt-2.5 text-[10.5px] font-bold uppercase tracking-wider text-[#2563eb]">
+                <Calendar
+                  size={18}
+                  className="text-[#2563eb]"
+                  strokeWidth={2.2}
+                />
+
+                <p className="mt-2.5 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[10.5px]">
                   BOOKED
                 </p>
-                <p className="mt-0.5 text-[13px] font-medium text-[#0a1128]">
+
+                <p className="mt-0.5 text-[12.5px] font-medium text-[#0a1128] sm:text-[13px]">
                   Site visit · Sat 11:00
                 </p>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>

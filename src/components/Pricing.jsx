@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Check } from "lucide-react";
+
 import { getWhatsAppLink } from "../utils/whatsapp";
 
 const plans = [
@@ -53,13 +55,12 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14"
+      className="w-full bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
-      <div className="mx-auto max-w-6xl">
-        
+      <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
         <div className="-mt-8 flex justify-center">
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             PRICING
           </span>
         </div>
@@ -67,21 +68,23 @@ export const Pricing = () => {
         {/* ── Heading & Subtitle ── */}
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-  Plans that grow with
-  your conversations
-</h2>
+            Plans that grow with
+            <br />
+            your conversations
+          </h2>
 
-          <p className="mx-auto mt-3 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
-  Talk to us for pricing tailored to your team size and message volume.
-</p>
+          <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+            Talk to us for pricing tailored to your team size and message
+            volume.
+          </p>
         </div>
 
         {/* ── 4 Pricing Cards Grid ── */}
-        <div className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch sm:mt-11">
+        <div className="mt-8 grid grid-cols-1 items-stretch gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:mt-11 lg:grid-cols-4">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative flex flex-col justify-between rounded-[24px] bg-white p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative flex flex-col justify-between rounded-[24px] bg-white p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${
                 plan.recommended
                   ? "border-2 border-[#2563eb] shadow-[0_12px_36px_rgba(37,99,235,0.12)]"
                   : "border border-[#e8edf4] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
@@ -90,7 +93,7 @@ export const Pricing = () => {
               <div>
                 {/* Recommended Badge */}
                 {plan.recommended ? (
-                  <span className="absolute right-5 top-5 inline-block rounded-full bg-[#2563eb] px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white sm:right-6 sm:top-6">
+                  <span className="absolute right-5 top-5 inline-block rounded-full bg-[#2563eb] px-3 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white sm:right-6 sm:top-6 sm:text-[10px]">
                     RECOMMENDED
                   </span>
                 ) : null}
@@ -126,22 +129,21 @@ export const Pricing = () => {
               {/* CTA Button */}
               <div className="mt-6 pt-2">
                 <a
-  href={getWhatsAppLink()}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
-    plan.recommended
-      ? "bg-[#2563eb] text-white shadow-[0_6px_20px_rgba(37,99,235,0.30)] hover:bg-[#1d4ed8]"
-      : "border border-[#e2e8f0] bg-white text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1] hover:bg-[#f8fafc]"
-  }`}
->
-  Talk to sales
-</a>
+                  href={getWhatsAppLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex w-full items-center justify-center rounded-2xl py-2.5 text-[13px] font-semibold transition-all duration-200 active:scale-95 ${
+                    plan.recommended
+                      ? "bg-[#2563eb] text-white shadow-[0_6px_20px_rgba(37,99,235,0.30)] hover:bg-[#1d4ed8]"
+                      : "border border-[#e2e8f0] bg-white text-[#0a1128] shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#cbd5e1] hover:bg-[#f8fafc]"
+                  }`}
+                >
+                  Talk to sales
+                </a>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -1,12 +1,13 @@
 import React from "react";
+
 import { Sparkles, ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section 
-    id="hero"
-    className="relative overflow-hidden border-b border-[#e2e8f0] bg-white pt-6 pb-14 px-5 sm:pt-10 sm:pb-18 sm:px-8 lg:px-14 lg:py-16">
-
+    <section
+      id="hero"
+      className="relative overflow-hidden border-b border-[#e2e8f0] bg-white px-4 pt-6 pb-14 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8 lg:py-16"
+    >
       {/* Background Soft Blue Radial Glow */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-[40rem]"
@@ -16,49 +17,43 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1240px] gap-10 lg:grid-cols-[1.12fr_1fr] lg:items-center lg:gap-14">
-
-        {/* =====================================================
-            LEFT SIDE: TEXT & CTA BUTTONS
-        ===================================================== */}
-        <div className="flex flex-col items-start text-left">
-
+      <div className="relative mx-auto grid w-full max-w-6xl gap-8 sm:gap-10 lg:grid-cols-[1.12fr_1fr] lg:items-center lg:gap-14">
+        {/* LEFT SIDE */}
+        <div className="flex min-w-0 flex-col items-start text-left">
           {/* Top Badge */}
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8e6fe] bg-[#eff6ff] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8e6fe] bg-[#eff6ff] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             AI WHATSAPP AUTOMATION
           </span>
 
           {/* Main Heading */}
-          <h1 className="mt-5 sm:mt-6 text-left text-[38px] font-bold leading-[1.08] tracking-tight text-[#0a1128] sm:text-[48px] lg:text-[58px]">
+          <h1 className="mt-5 text-left text-[36px] font-bold leading-[1.08] tracking-tight text-[#0a1128] sm:mt-6 sm:text-[48px] lg:text-[58px]">
             Your AI Team
             <br />
             on <span className="text-[#2563eb]">WhatsApp</span>
           </h1>
 
           {/* Description */}
-        <p className="mt-4 max-w-xl text-left text-[14px] leading-[1.65] text-[#64748b] sm:text-[15.5px] lg:text-[16.5px]">
-  Sandesa turns WhatsApp conversations into automated customer
-  journeys helping your business capture leads, qualify prospects,
-  follow up, answer questions and keep your team in the loop.
-</p>
+          <p className="mt-4 max-w-xl text-left text-[14px] leading-[1.65] text-[#64748b] sm:text-[15.5px] lg:text-[16.5px]">
+            Sandesa turns WhatsApp conversations into automated customer
+            journeys helping your business capture leads, qualify prospects,
+            follow up, answer questions and keep your team in the loop.
+          </p>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex w-full flex-col gap-3.5 sm:w-auto sm:flex-row sm:items-center">
+            {/* Get Started Free */}
+            <a
+              href="#contact-us"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-[20px] bg-[#2563eb] px-7 py-3.5 text-[14px] font-semibold text-white shadow-[0_8px_24px_rgba(37,99,235,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:scale-95 sm:w-auto sm:text-[14.5px]"
+            >
+              <span>Get Started Free</span>
+              <ArrowRight className="h-4 w-4" />
+            </a>
 
-            {/* 1. Get Started Free Button */}
-            {/* 1. Get Started Free Button */}
-<a
-  href="#contact-us"
-  className="inline-flex items-center justify-center gap-2 rounded-[20px] bg-[#2563eb] px-7 py-3.5 text-[14.5px] font-semibold text-white shadow-[0_8px_24px_rgba(37,99,235,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:scale-95"
->
-  <span>Get Started Free</span>
-  <ArrowRight className="h-4 w-4" />
-</a>
-
-            {/* 2. Watch 2-Min Demo Button */}
+            {/* Watch 2-Min Demo */}
             <a
               href="#watch-demo"
-              className="inline-flex items-center justify-center gap-2 rounded-[20px] border border-[#e2e8f0] bg-white px-7 py-3.5 text-[14.5px] font-semibold text-[#0a1128] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:bg-[#f8fafc] active:scale-95"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-[20px] border border-[#e2e8f0] bg-white px-7 py-3.5 text-[14px] font-semibold text-[#0a1128] shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#cbd5e1] hover:bg-[#f8fafc] active:scale-95 sm:w-auto sm:text-[14.5px]"
             >
               <Play
                 className="h-4 w-4 text-[#2563eb]"
@@ -67,30 +62,20 @@ const Hero = () => {
               />
               <span>Watch 2-Min Demo</span>
             </a>
-
           </div>
 
           {/* Bottom Trust Line */}
           <div className="mt-8 flex items-center gap-2 text-left text-[13px] text-[#64748b]">
             <span className="shrink-0 rounded-full bg-[#22c55e]" />
           </div>
-
         </div>
 
-
-        {/* =====================================================
-            RIGHT SIDE: 2 CARDS
-        ===================================================== */}
+        {/* RIGHT SIDE */}
         <div className="mx-auto flex w-full max-w-[540px] flex-col gap-5 sm:grid sm:max-w-none sm:grid-cols-[1.1fr_1fr] sm:items-start sm:gap-4 lg:mx-0">
-
-          {/* =====================================================
-              CARD 1: WHATSAPP CHAT MOCKUP
-          ===================================================== */}
-          <div className="flex h-[475px] w-full flex-col justify-between overflow-hidden rounded-[26px] border border-[#e2e8f0] bg-white shadow-[0_20px_50px_rgba(15,23,42,0.07)]">
-
+          {/* CARD 1: WHATSAPP CHAT MOCKUP */}
+          <div className="flex h-[440px] w-full flex-col justify-between overflow-hidden rounded-[26px] border border-[#e2e8f0] bg-white shadow-[0_20px_50px_rgba(15,23,42,0.07)] sm:h-[475px]">
             {/* WhatsApp Header */}
-            <div className="flex items-center gap-3 bg-[#0d1b2a] px-4.5 py-3.5">
-
+            <div className="flex items-center gap-3 bg-[#0d1b2a] px-4 py-3.5 sm:px-4.5">
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#1b3830] text-[#22c55e]">
                 <svg
                   viewBox="0 0 24 24"
@@ -110,17 +95,13 @@ const Hero = () => {
                   Business Account · online
                 </p>
               </div>
-
             </div>
 
-
             {/* Chat Messages Area */}
-            <div className="flex flex-1 flex-col justify-between bg-[#f8fafc]/60 px-3.5 py-4">
-
-              {/* Message 1 (Incoming) */}
+            <div className="flex flex-1 flex-col justify-between bg-[#f8fafc]/60 px-3 py-4 sm:px-3.5">
+              {/* Message 1 */}
               <div className="w-fit max-w-[88%] rounded-[18px] rounded-tl-sm border border-[#e5eaf2] bg-white px-3.5 py-2.5 shadow-2xs">
-
-                <p className="text-[14.5px] leading-relaxed text-[#0f172a]">
+                <p className="text-[13.5px] leading-relaxed text-[#0f172a] sm:text-[14.5px]">
                   Hi, I'm interested in your 2BHK apartments.
                 </p>
 
@@ -128,31 +109,23 @@ const Hero = () => {
                   <span>10:41</span>
                   <span>✓</span>
                 </div>
-
               </div>
 
-
-              {/* Message 2 (Outgoing - Green) */}
+              {/* Message 2 */}
               <div className="my-2 ml-auto w-fit max-w-[88%] rounded-[18px] rounded-tr-sm bg-[#dcfce7] px-3.5 py-2.5 shadow-2xs">
-
-                <p className="text-[14.5px] leading-relaxed text-[#0f172a]">
+                <p className="text-[13.5px] leading-relaxed text-[#0f172a] sm:text-[14.5px]">
                   Absolutely. Which location and budget are you looking for?
                 </p>
 
                 <div className="mt-1 flex items-center justify-end gap-1 text-[9.5px] text-slate-500">
                   <span>10:41</span>
-                  <span className="font-bold text-[#2563eb]">
-                    ✓✓
-                  </span>
+                  <span className="font-bold text-[#2563eb]">✓✓</span>
                 </div>
-
               </div>
 
-
-              {/* Message 3 (Incoming) */}
+              {/* Message 3 */}
               <div className="w-fit max-w-[88%] rounded-[18px] rounded-tl-sm border border-[#e5eaf2] bg-white px-3.5 py-2.5 shadow-2xs">
-
-                <p className="text-[14.5px] leading-relaxed text-[#0f172a]">
+                <p className="text-[13.5px] leading-relaxed text-[#0f172a] sm:text-[14.5px]">
                   Baner. Around ₹70L.
                 </p>
 
@@ -160,15 +133,11 @@ const Hero = () => {
                   <span>10:42</span>
                   <span>✓</span>
                 </div>
-
               </div>
-
 
               {/* Typing Bubble */}
               <div className="mt-1 ml-auto flex h-[30px] items-center justify-center rounded-full bg-[#dcfce7] px-3.5">
-
                 <span className="flex items-end gap-1.5">
-
                   <span
                     className="h-1.5 w-1.5 rounded-full bg-[#16a34a]"
                     style={{
@@ -192,18 +161,13 @@ const Hero = () => {
                       animationDelay: "0.3s",
                     }}
                   />
-
                 </span>
-
               </div>
-
             </div>
-
 
             {/* Chat Footer Input Bar */}
             <div className="flex items-center gap-2 border-t border-[#edf2f7] bg-white px-3.5 py-3">
-
-              <div className="flex-1 rounded-full border border-[#e2e8f0] bg-[#f8fafc] px-3.5 py-1.5 text-[11.5px] text-slate-400">
+              <div className="min-w-0 flex-1 rounded-full border border-[#e2e8f0] bg-[#f8fafc] px-3.5 py-1.5 text-[11px] text-slate-400">
                 Type a message
               </div>
 
@@ -219,117 +183,93 @@ const Hero = () => {
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                 </svg>
               </button>
-
             </div>
-
           </div>
 
-
-          {/* =====================================================
-              CARD 2: RAHUL MEHTA LEAD CARD
-              - Assigned & Score Bar situated right under Timeline
-              - Full card height h-[475px] with clean space below
-          ===================================================== */}
-          <div className="flex h-[418px] w-full flex-col justify-start rounded-[26px] border border-[#e2e8f0] bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.07)] sm:mt-14">
-
+          {/* CARD 2: RAHUL MEHTA LEAD CARD */}
+          <div className="flex h-[390px] w-full flex-col justify-start rounded-[26px] border border-[#e2e8f0] bg-white p-4 shadow-[0_20px_50px_rgba(15,23,42,0.07)] sm:mt-14 sm:h-[418px] sm:p-5">
             {/* Top Profile Header */}
             <div className="flex items-start justify-between gap-1.5">
-
               {/* Avatar + Info */}
-              <div className="flex items-center gap-2.5">
-
-                <span className="grid h-9.5 w-9.5 shrink-0 place-items-center rounded-full bg-[#eff6ff] text-[12.5px] font-bold text-[#2563eb]">
+              <div className="flex min-w-0 items-center gap-2.5">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#eff6ff] text-[12px] font-bold text-[#2563eb] sm:h-9.5 sm:w-9.5 sm:text-[12.5px]">
                   RM
                 </span>
 
-                <div>
-
-                  <p className="text-[13.5px] font-bold text-[#0a1128]">
+                <div className="min-w-0">
+                  <p className="truncate text-[13px] font-bold text-[#0a1128] sm:text-[13.5px]">
                     Rahul ...
                   </p>
 
-                  <p className="text-[9.5px] leading-tight text-[#64748b]">
-                    Captured<br />via <br/>WhatsApp<br />· Just now
+                  <p className="text-[9px] leading-tight text-[#64748b] sm:text-[9.5px]">
+                    Captured
+                    <br />
+                    via
+                    <br />
+                    WhatsApp
+                    <br />· Just now
                   </p>
-
                 </div>
-
               </div>
 
               {/* Hot Lead Badge */}
-              <span className="shrink-0 rounded-full border border-red-200 bg-[#fff1ed] px-2.5 py-0.5 text-[8.5px] font-bold tracking-wider text-red-600">
+              <span className="shrink-0 rounded-full border border-red-200 bg-[#fff1ed] px-2 py-0.5 text-[8px] font-bold tracking-wider text-red-600 sm:px-2.5 sm:text-[8.5px]">
                 🔥 HOT LEAD
               </span>
-
             </div>
 
-
             {/* Specs Table */}
-            <dl className="mt-4 space-y-2 text-[12.5px]">
-
-              <div className="flex items-center justify-between">
+            <dl className="mt-4 space-y-2 text-[12px] sm:text-[12.5px]">
+              <div className="flex items-center justify-between gap-3">
                 <dt className="text-[#64748b]">Budget</dt>
                 <dd className="font-bold text-[#0a1128]">₹70L</dd>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <dt className="text-[#64748b]">Location</dt>
                 <dd className="font-bold text-[#0a1128]">Baner</dd>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <dt className="text-[#64748b]">Intent</dt>
                 <dd className="font-bold text-[#0a1128]">Purchase</dd>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <dt className="text-[#64748b]">Timeline</dt>
                 <dd className="font-bold text-[#0a1128]">30 days</dd>
               </div>
-
             </dl>
 
-
-            {/* Assigned Pill (Directly below Timeline) */}
-            <div className="mt-4 flex items-center justify-between rounded-full bg-[#eff6ff] px-4 py-2 text-[12px]">
-
-              <span className="text-[11.5px] font-medium text-[#475569]">
+            {/* Assigned Pill */}
+            <div className="mt-4 flex items-center justify-between rounded-full bg-[#eff6ff] px-3.5 py-2 text-[11px] sm:px-4 sm:text-[12px]">
+              <span className="text-[11px] font-medium text-[#475569] sm:text-[11.5px]">
                 Assigned
               </span>
 
-              <span className="text-[11.5px] font-bold text-[#2563eb]">
+              <span className="text-[11px] font-bold text-[#2563eb] sm:text-[11.5px]">
                 — Sales Team
               </span>
-
             </div>
 
-
-            {/* Lead Score Progress Bar (Directly below Assigned pill) */}
+            {/* Lead Score Progress Bar */}
             <div className="mt-3.5 flex items-center justify-between gap-3">
-
               <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#e2e8f0]">
                 <span className="block h-full w-[82%] rounded-full bg-[#2563eb]" />
               </span>
 
-              <span className="text-[11px] font-bold text-[#0a1128]">
+              <span className="text-[10.5px] font-bold text-[#0a1128] sm:text-[11px]">
                 Score 82
               </span>
-
             </div>
 
             {/* Empty space preserving full height */}
             <div className="flex-1" />
-
           </div>
-
         </div>
-
       </div>
 
-
-      {/* =========================================================
-          TYPING DOT WAVE ANIMATION
-      ========================================================= */}
+      {/* TYPING DOT WAVE ANIMATION */}
       <style>{`
         @keyframes typingWave {
           0%,
@@ -345,7 +285,6 @@ const Hero = () => {
           }
         }
       `}</style>
-
     </section>
   );
 };
