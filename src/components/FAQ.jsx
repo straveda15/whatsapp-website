@@ -45,18 +45,18 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="w-full border-t border-[#e2e8f0] bg-white px-5 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-10"
+      className="w-full border-t border-[#e2e8f0] bg-white px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-10"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
         <div className="-mt-4 flex justify-start">
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             FAQ
           </span>
         </div>
 
         {/* ── FAQ Content ── */}
-        <div className="mt-4 grid items-start gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
+        <div className="mt-4 grid items-start gap-8 sm:gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
           {/* ── Left Heading ── */}
           <div className="text-left">
             <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
@@ -64,14 +64,15 @@ const FAQ = () => {
               <br />
               Asked Questions
             </h2>
-            <p className="mt-4 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
-                  Everything you need to know about Sandesa.
-                </p>
+
+            <p className="mt-3 max-w-2xl text-[14px] leading-[1.65] text-[#64748b] sm:mt-4 sm:text-[15.5px]">
+              Everything you need to know about Sandesa.
+            </p>
           </div>
 
           {/* ── FAQ List ── */}
-          <div>
-            <div className="space-y-2.5">
+          <div className="w-full min-w-0">
+            <div className="space-y-1.5 sm:space-y-2.5">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
 
@@ -85,14 +86,14 @@ const FAQ = () => {
                         type="button"
                         aria-expanded={isOpen}
                         onClick={() => handleToggle(index)}
-                        className="flex w-full cursor-pointer items-center justify-between py-3.5 text-left text-[15.5px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none"
+                        className="flex w-full cursor-pointer items-center justify-between gap-4 py-2.5 text-left text-[14px] font-semibold text-[#0a1128] transition-colors focus-visible:outline-none sm:py-3.5 sm:text-[15.5px]"
                       >
                         <span>{faq.question}</span>
 
                         <ChevronDown
-                          size={16}
+                          size={15}
                           strokeWidth={2}
-                          className={`shrink-0 text-[#64748b] transition-transform duration-200 ${
+                          className={`shrink-0 text-[#64748b] transition-transform duration-200 sm:h-4 sm:w-4 ${
                             isOpen ? "rotate-180 text-[#2563eb]" : ""
                           }`}
                         />
@@ -102,12 +103,12 @@ const FAQ = () => {
                     <div
                       className={`grid transition-all duration-200 ease-in-out ${
                         isOpen
-                          ? "grid-rows-[1fr] opacity-100 pb-4"
+                          ? "grid-rows-[1fr] opacity-100 pb-3 sm:pb-4"
                           : "grid-rows-[0fr] opacity-0 pb-0"
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+                        <p className="text-[13.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
                           {faq.answer}
                         </p>
                       </div>

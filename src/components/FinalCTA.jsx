@@ -6,11 +6,11 @@ export const FinalCTA = () => {
   return (
     <section
       id="final-cta"
-      className="relative w-full overflow-hidden bg-[#071328] py-6 px-2 sm:py-10 sm:px-6 lg:py-14 lg:px-8 text-white"
+      className="relative w-full overflow-hidden bg-[#071328] px-4 py-6 text-white sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
       {/* ── Ambient Radial Glow ── */}
       <div
-        className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[420px] w-[420px] rounded-full sm:h-[550px] sm:w-[550px]"
+        className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[320px] w-[320px] rounded-full sm:h-[450px] sm:w-[450px] lg:h-[550px] lg:w-[550px]"
         style={{
           background:
             "radial-gradient(circle, rgba(37, 99, 235, 0.35) 0%, transparent 70%)",
@@ -18,25 +18,26 @@ export const FinalCTA = () => {
         }}
       />
 
-      <div className="-mt-8 relative mx-auto max-w-6xl text-center">
-        {/* ── Heading (Exact Mobile Line Breaks) ── */}
+      <div className="-mt-8 relative mx-auto w-full max-w-6xl text-center">
+        {/* ── Heading ── */}
         <h2 className="mx-auto max-w-[1200px] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[42px] md:leading-[1.18]">
-  Your customers are already talking
-  <br />
-  It's time your business started listening and acting
-</h2>
+          Your customers are already talking
+          <br />
+          It's time your business started listening and acting
+        </h2>
 
         {/* ── Subtitle ── */}
-        <p className="mx-auto mt-4 max-w-sm text-[14.5px] leading-[1.65] text-[#94a3b8] sm:max-w-md sm:text-[15.5px]">
-  Build your first automated WhatsApp journey with
-  <br className="sm:hidden" /> Sandesa.
-</p>
-        {/* ── Action Buttons (Side by Side in Mobile) ── */}
+        <p className="mx-auto mt-4 max-w-sm text-[14px] leading-[1.65] text-[#94a3b8] sm:max-w-md sm:text-[15.5px]">
+          Build your first automated WhatsApp journey with
+          <br className="sm:hidden" /> Sandesa.
+        </p>
+
+        {/* ── Action Buttons ── */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-          {/* 1. Primary White Button */}
+          {/* Primary Button */}
           <a
             href="#contact-us"
-            className="group inline-flex items-center justify-center gap-2 rounded-[20px] bg-white px-5 py-3 text-[13.5px] font-bold text-[#071328] shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 active:scale-95"
+            className="group inline-flex items-center justify-center gap-2 rounded-[20px] bg-white px-5 py-3 text-[13px] font-bold text-[#071328] shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 active:scale-95 sm:text-[13.5px]"
           >
             <span>Start with Sandesa</span>
             <ArrowRight
@@ -46,13 +47,11 @@ export const FinalCTA = () => {
             />
           </a>
 
-          {/* 2. Secondary Translucent Navy Button */}
+          {/* Secondary Button */}
           <button
             type="button"
-            onClick={() =>
-              window.dispatchEvent(new Event("open-live-demo"))
-            }
-            className="inline-flex items-center justify-center rounded-[20px] border border-[#233b68] bg-[#142647] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1a315c] hover:border-[#32528e] active:scale-95"
+            onClick={() => window.dispatchEvent(new Event("open-live-demo"))}
+            className="inline-flex items-center justify-center rounded-[20px] border border-[#233b68] bg-[#142647] px-5 py-3 text-[13px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#32528e] hover:bg-[#1a315c] active:scale-95 sm:text-[13.5px]"
           >
             Book a Demo
           </button>

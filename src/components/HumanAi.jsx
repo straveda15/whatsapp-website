@@ -19,30 +19,29 @@ export const HumanAI = () => {
   return (
     <section
       id="human-ai"
-      className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-y border-[#e2e8f0]"
+      className="w-full border-y border-[#e2e8f0] bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
-      <div className="mx-auto max-w-5xl">
-
+      <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
         <div className="-mt-8 flex justify-center">
-          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
+          <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:px-4 sm:text-[11px]">
             HUMAN + AI
           </span>
         </div>
 
         {/* ── Heading ── */}
-        <div className="text-center sm:mt-5">
-          <h2 className="text-[28px] font-bold tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px] leading-[1.18]">
+        <div className="mt-4 text-center sm:mt-5">
+          <h2 className="text-3xl font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px]">
             AI when it's repetitive
+            <br />
             Humans when it matters
           </h2>
         </div>
 
         {/* ── Flow Diagram ── */}
-        <div className="mx-auto mt-8 flex max-w-[360px] flex-col items-center sm:mt-9 sm:max-w-[420px]">
-          
+        <div className="mx-auto mt-8 flex w-full max-w-[360px] flex-col items-center sm:mt-9 sm:max-w-[420px]">
           {/* Node 1: Customer */}
-          <div className="flex h-10 w-full items-center justify-center rounded-2xl border border-[#bbf7d0] bg-[#dafbe4] text-center text-[13.5px] font-medium text-[#15803d] shadow-xs">
+          <div className="flex h-10 w-full items-center justify-center rounded-2xl border border-[#bbf7d0] bg-[#dafbe4] px-3 text-center text-[13px] font-medium text-[#15803d] shadow-xs sm:text-[13.5px]">
             Customer
           </div>
 
@@ -50,20 +49,20 @@ export const HumanAI = () => {
           <div className="h-4 w-[1px] bg-[#cbd5e1]" />
 
           {/* Node 2: Sandesa AI */}
-          <div className="flex h-10 w-full items-center justify-center rounded-2xl border border-[#bfdbfe] bg-[#e6f0fd] text-center text-[13.5px] font-semibold text-[#1d4ed8] shadow-xs">
+          <div className="flex h-10 w-full items-center justify-center rounded-2xl border border-[#bfdbfe] bg-[#e6f0fd] px-3 text-center text-[13px] font-semibold text-[#1d4ed8] shadow-xs sm:text-[13.5px]">
             Sandesa AI
           </div>
         </div>
 
         {/* ── 3 Outcome Cards ── */}
-        <div className="mx-auto mt-8 grid max-w-[880px] grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 sm:mt-10">
+        <div className="mx-auto mt-8 grid w-full max-w-[880px] grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-3 sm:gap-5">
           {outcomes.map(({ label, result }) => (
             <div
               key={label}
-              className="flex flex-col items-center justify-center rounded-[24px] border border-[#e8edf4] bg-white py-6 px-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]"
+              className="flex min-h-[150px] flex-col items-center justify-center rounded-[24px] border border-[#e8edf4] bg-white px-5 py-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:min-h-[160px] sm:px-6"
             >
               {/* Question / Request */}
-              <p className="text-[14px] font-semibold text-[#0a1128]">
+              <p className="text-[13.5px] font-semibold text-[#0a1128] sm:text-[14px]">
                 {label}
               </p>
 
@@ -73,13 +72,12 @@ export const HumanAI = () => {
               </span>
 
               {/* Result Action */}
-              <p className="text-[14px] font-bold text-[#2563eb]">
+              <p className="text-[13.5px] font-bold text-[#2563eb] sm:text-[14px]">
                 {result}
               </p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

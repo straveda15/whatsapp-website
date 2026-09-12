@@ -72,30 +72,29 @@ const Navbar = () => {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? "border-b border-[#e2e8f0]/80 bg-white/90 backdrop-blur-md shadow-[0_10px_30px_rgba(15,23,42,0.06)] py-3 sm:py-3.5"
-            : "border-b border-transparent bg-white/70 backdrop-blur-sm py-4 sm:py-5"
+            ? "border-b border-[#e2e8f0]/80 bg-white/90 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur-md sm:py-3.5"
+            : "border-b border-transparent bg-white/70 py-4 backdrop-blur-sm sm:py-5"
         }`}
       >
-        <div className="mx-auto flex max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-12">
-
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* ── Logo + Brand Name ── */}
           <button
             type="button"
             onClick={() => scrollToSection("#hero")}
-            className="group flex shrink-0 items-center gap-3 transition-transform active:scale-95"
+            className="group flex shrink-0 items-center gap-2.5 transition-transform active:scale-95 sm:gap-3"
             aria-label="Go to Home"
           >
             {/* Circular Logo Container */}
-            <div className="flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center overflow-hidden rounded-full border border-[#dbe4f0] bg-white shadow-[0_4px_16px_rgba(37,99,235,0.14)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.22)]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#dbe4f0] bg-white shadow-[0_4px_16px_rgba(37,99,235,0.14)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.22)] sm:h-13 sm:w-13">
               <img
                 src={logo}
                 alt="Sandesa Logo"
-                className="h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 object-contain"
+                className="h-8 w-8 object-contain sm:h-9.5 sm:w-9.5"
               />
             </div>
 
             {/* Brand Name */}
-            <span className="text-[23px] sm:text-[25px] font-extrabold tracking-tight text-[#0a1128]">
+            <span className="text-[21px] font-extrabold tracking-tight text-[#0a1128] sm:text-[25px]">
               Sandesa<span className="text-[#2563eb]"></span>
             </span>
           </button>
@@ -107,7 +106,7 @@ const Navbar = () => {
                 key={label}
                 type="button"
                 onClick={() => scrollToSection(href)}
-                className="rounded-full px-4.5 py-2 text-[15px] font-medium text-[#475569] transition-all duration-150 hover:bg-[#eff6ff] hover:text-[#2563eb]"
+                className="rounded-full px-4 py-2 text-[14px] font-medium text-[#475569] transition-all duration-150 hover:bg-[#eff6ff] hover:text-[#2563eb] xl:px-4.5 xl:text-[15px]"
               >
                 {label}
               </button>
@@ -119,7 +118,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setShowDemo(true)}
-              className="group inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-6 py-2.5 text-[14.5px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_10px_26px_rgba(37,99,235,0.36)] active:scale-95"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-5 py-2.5 text-[14px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_10px_26px_rgba(37,99,235,0.36)] active:scale-95 xl:px-6 xl:text-[14.5px]"
             >
               <span>Live Demo</span>
 
@@ -133,38 +132,38 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => scrollToSection("#contact-us")}
-              className="inline-flex items-center justify-center rounded-full border border-[#e2e8f0] bg-white px-5 py-2.5 text-[14.5px] font-semibold text-[#0a1128] transition-all duration-200 hover:border-[#2563eb] hover:text-[#2563eb] active:scale-95"
+              className="inline-flex items-center justify-center rounded-full border border-[#e2e8f0] bg-white px-5 py-2.5 text-[14px] font-semibold text-[#0a1128] transition-all duration-200 hover:border-[#2563eb] hover:text-[#2563eb] active:scale-95 xl:text-[14.5px]"
             >
               Contact Us
             </button>
           </div>
-        </div>
 
-        {/* ── Mobile Menu Toggle Button ── */}
-        <button
-          type="button"
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-xl text-[#0a1128] transition-colors hover:bg-slate-100 lg:hidden"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? (
-            <X size={24} strokeWidth={2.2} />
-          ) : (
-            <Menu size={24} strokeWidth={2.2} />
-          )}
-        </button>
+          {/* ── Mobile Menu Toggle Button ── */}
+          <button
+            type="button"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="flex h-10 w-10 items-center justify-center rounded-xl text-[#0a1128] transition-colors hover:bg-slate-100 lg:hidden sm:h-11 sm:w-11"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <X size={23} strokeWidth={2.2} />
+            ) : (
+              <Menu size={23} strokeWidth={2.2} />
+            )}
+          </button>
+        </div>
 
         {/* ── Mobile Dropdown Menu ── */}
         {isOpen && (
-          <div className="border-t border-[#e2e8f0] bg-white/95 px-5 pb-6 pt-4 backdrop-blur-lg shadow-xl lg:hidden">
+          <div className="border-t border-[#e2e8f0] bg-white/95 px-4 pb-6 pt-4 shadow-xl backdrop-blur-lg lg:hidden sm:px-6">
             <nav className="flex flex-col gap-1.5">
               {navLinks.map(({ label, href }) => (
                 <button
                   key={label}
                   type="button"
                   onClick={() => scrollToSection(href)}
-                  className="w-full rounded-xl px-4 py-3 text-left text-[16px] font-medium text-[#334155] transition-colors hover:bg-[#eff6ff] hover:text-[#2563eb]"
+                  className="w-full rounded-xl px-4 py-3 text-left text-[15px] font-medium text-[#334155] transition-colors hover:bg-[#eff6ff] hover:text-[#2563eb] sm:text-[16px]"
                 >
                   {label}
                 </button>
@@ -179,7 +178,7 @@ const Navbar = () => {
                   setShowDemo(true);
                   setIsOpen(false);
                 }}
-                className="w-full rounded-full bg-[#2563eb] py-3 text-[15px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-colors hover:bg-[#1d4ed8]"
+                className="w-full rounded-full bg-[#2563eb] py-3 text-[14px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-colors hover:bg-[#1d4ed8] sm:text-[15px]"
               >
                 Live Demo
               </button>
@@ -191,34 +190,34 @@ const Navbar = () => {
       {/* ── Live Demo Popup ── */}
       {showDemo && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/50 px-4 py-6 backdrop-blur-sm sm:py-8"
           onClick={() => setShowDemo(false)}
         >
           <div
-            className="relative w-full max-w-2xl rounded-2xl bg-white p-6 shadow-2xl sm:p-8"
+            className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-5 shadow-2xl sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setShowDemo(false)}
-              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-slate-200"
+              className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-slate-200 sm:right-4 sm:top-4"
               aria-label="Close demo"
             >
               <X size={20} />
             </button>
 
             {/* Popup Content */}
-            <div className="pr-10">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#2563eb]">
+            <div className="pr-9 sm:pr-10">
+              <p className="text-[12px] font-semibold uppercase tracking-wider text-[#2563eb] sm:text-sm">
                 Live Demo
               </p>
 
-              <h2 className="mt-2 text-2xl font-bold text-[#0a1128] sm:text-3xl">
+              <h2 className="mt-2 text-xl font-bold text-[#0a1128] sm:text-3xl">
                 See Sandesa AI in Action
               </h2>
 
-              <p className="mt-3 text-sm leading-relaxed text-slate-500 sm:text-base">
+              <p className="mt-3 text-[13px] leading-relaxed text-slate-500 sm:text-base">
                 Experience how Sandesa automates WhatsApp conversations,
                 captures leads and helps your team engage with customers.
               </p>
@@ -226,7 +225,7 @@ const Navbar = () => {
 
             {/* ── Demo Form ── */}
             <form
-              className="space-y-6"
+              className="mt-5 space-y-4 sm:mt-6 sm:space-y-6"
               onSubmit={(e) => {
                 e.preventDefault();
                 alert("Live Demo request submitted!");
@@ -236,6 +235,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Enter your name"
+                required
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
               />
 
@@ -243,7 +243,6 @@ const Navbar = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                required
                 title="Please enter a valid email address"
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
               />
