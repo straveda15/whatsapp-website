@@ -37,7 +37,7 @@ const WhySandesa = () => {
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* Section Badge */}
-        <div className="-mt-8 flex justify-center">
+        <div className="mt-0 flex justify-center sm:-mt-8">
           <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[10px] font-medium uppercase tracking-wider text-[#1d64ec] sm:text-[11px]">
             WHY SANDESA
           </span>

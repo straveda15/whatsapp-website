@@ -50,7 +50,7 @@ const Industries = () => {
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Content ── */}
-        <div className="-mt-8 mx-auto flex w-full max-w-4xl flex-col items-center gap-3 text-center">
+        <div className="mt-0 mx-auto flex w-full max-w-4xl flex-col items-center gap-3 text-center sm:-mt-8">
           {/* Badge */}
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             INDUSTRIES

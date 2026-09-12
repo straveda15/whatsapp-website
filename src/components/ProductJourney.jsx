@@ -34,7 +34,7 @@ export const ProductJourney = () => {
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="mt-0 flex justify-center -mt-8">
           <span className="relative z-10 -mt-7 inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             PRODUCT JOURNEY
           </span>

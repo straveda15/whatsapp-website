@@ -49,7 +49,7 @@ const FAQ = () => {
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
-        <div className="-mt-4 flex justify-start">
+        <div className="mt-0 flex justify-start sm:-mt-4">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             FAQ
           </span>
