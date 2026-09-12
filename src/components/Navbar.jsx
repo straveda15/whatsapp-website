@@ -69,8 +69,9 @@ const Navbar = () => {
 
   return (
     <>
+      {/* ── Fixed Navbar ── */}
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? "border-b border-[#e2e8f0]/80 bg-white/90 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur-md sm:py-3.5"
             : "border-b border-transparent bg-white/70 py-4 backdrop-blur-sm sm:py-5"
@@ -81,7 +82,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={() => scrollToSection("#hero")}
-            className="group flex shrink-0 items-center gap-2.5 transition-transform active:scale-95 sm:gap-3"
+            className="group flex shrink-0 items-center gap-2.5 transition-transform active:scale-95 focus:outline-none sm:gap-3"
             aria-label="Go to Home"
           >
             {/* Circular Logo Container */}
@@ -187,6 +188,9 @@ const Navbar = () => {
         )}
       </header>
 
+      {/* ── Navbar Space ── */}
+      <div className="h-[88px] sm:h-[96px]" />
+
       {/* ── Live Demo Popup ── */}
       {showDemo && (
         <div
@@ -236,15 +240,21 @@ const Navbar = () => {
                 type="text"
                 placeholder="Enter your name"
                 required
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
+                pattern="[A-Za-z ]+"
+                title="Please enter a valid name using letters only"
+                onInput={(e) => {
+                  e.target.value = e.target.value.replace(/[^A-Za-z ]/g, "");
+                }}
+                className="w-full rounded-xl border border-[#e2e8f0] px-4 py-3 text-sm outline-none transition focus:border-[#2563eb]"
               />
 
               {/* Email */}
               <input
                 type="email"
                 placeholder="Enter your email"
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
                 title="Please enter a valid email address"
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#0a1128] outline-none transition focus:border-[#2563eb] focus:ring-2 focus:ring-blue-100"
+                className="w-full rounded-xl border border-[#e2e8f0] px-4 py-3 text-sm outline-none transition focus:border-[#2563eb]"
               />
 
               {/* Phone Number */}

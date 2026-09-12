@@ -200,7 +200,7 @@ function ContactUs() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-[#2563eb] py-3 text-[13px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_10px_26px_rgba(37,99,235,0.36)] active:scale-95 sm:text-[13.5px]"
+                    className="mb-2 w-full rounded-xl bg-[#2563eb] py-3 text-[13px] font-semibold text-white shadow-[0_6px_20px_rgba(37,99,235,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_10px_26px_rgba(37,99,235,0.36)] active:scale-95 sm:text-[13.5px]"
                   >
                     Submit
                   </button>

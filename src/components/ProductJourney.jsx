@@ -30,12 +30,12 @@ export const ProductJourney = () => {
   return (
     <section
       id="product-journey"
-      className="w-full border-b border-[#e2e8f0] bg-white px-4 pb-12 pt-6 sm:px-6 sm:pb-16 sm:pt-10 lg:px-8 lg:pb-20 lg:pt-12"
+      className="w-full scroll-mt-24 border-b border-[#e2e8f0] bg-white px-4 pb-12 pt-6 sm:px-6 sm:pb-16 sm:pt-10 lg:px-8 lg:pb-20 lg:pt-12"
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Pill Badge ── */}
-        <div className="mt-0 flex justify-center -mt-8">
-          <span className="relative z-10 -mt-7 inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
+        <div className="mt-0 flex justify-center sm:-mt-7">
+          <span className="relative z-10 inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:text-[11px]">
             PRODUCT JOURNEY
           </span>
         </div>

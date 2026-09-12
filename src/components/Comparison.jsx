@@ -34,11 +34,11 @@ export const Comparison = () => {
   return (
     <section
       id="comparison"
-      className="w-full border-y border-[#e2e8f0] bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
+      className="w-full scroll-mt-24 border-y border-[#e2e8f0] bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* ── Top Badge & Heading ── */}
-        <div className="-mt-8 flex justify-center">
+        <div className="mt-0 flex justify-center sm:-mt-8">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2563eb] sm:px-4 sm:text-[11px]">
             COMPARISON
           </span>
@@ -52,9 +52,9 @@ export const Comparison = () => {
           </h2>
         </div>
 
-        {/* ── Comparison Table Card ── */}
-        <div className="mt-7 w-full overflow-x-auto rounded-[22px] border border-[#e2e8f0] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:mt-10 sm:rounded-[24px]">
-          <div className="min-w-[520px]">
+        {/* ── Desktop Comparison Table ── */}
+        <div className="mt-7 hidden w-full rounded-[22px] border border-[#e2e8f0] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] sm:mt-10 md:block md:rounded-[24px]">
+          <div className="w-full">
             {/* Table Header */}
             <div className="grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch border-b border-[#e2e8f0] text-center">
               <div className="bg-[#f8fafc] p-3 sm:p-3.5" />
@@ -62,7 +62,8 @@ export const Comparison = () => {
               <div className="flex items-center justify-center bg-[#f8fafc] p-3 text-[10px] font-bold uppercase tracking-wider text-[#64748b] sm:p-3.5 sm:text-[12px]">
                 <span>
                   WHATSAPP
-                  <br className="sm:hidden" /> BUSINESS
+                  <br />
+                  BUSINESS
                 </span>
               </div>
 
@@ -72,37 +73,96 @@ export const Comparison = () => {
             </div>
 
             {/* Table Rows */}
-            {comparisonData.map(({ feature, whatsapp, sandesa }, index) => (
-              <div
-                key={feature}
-                className={`grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch text-[11px] sm:text-[13.5px] ${
-                  index !== 0 ? "border-t border-[#edf2f7]" : ""
-                }`}
-              >
-                <div className="flex items-center p-3 font-bold text-[#0a1128] sm:p-3.5 sm:px-5">
+            {comparisonData.map(
+              ({ feature, whatsapp, sandesa }, index) => (
+                <div
+                  key={feature}
+                  className={`grid grid-cols-[1fr_1.1fr_1.2fr] items-stretch text-[11px] sm:text-[13.5px] ${
+                    index !== 0 ? "border-t border-[#edf2f7]" : ""
+                  }`}
+                >
+                  <div className="flex items-center p-3 font-bold text-[#0a1128] sm:p-3.5 sm:px-5">
+                    {feature}
+                  </div>
+
+                  <div className="flex items-start gap-1.5 p-3 text-[#64748b] sm:gap-2 sm:p-3.5">
+                    <X
+                      size={13}
+                      className="mt-0.5 shrink-0 text-red-400 sm:h-[14px] sm:w-[14px]"
+                      strokeWidth={2.4}
+                    />
+
+                    <span className="leading-snug">{whatsapp}</span>
+                  </div>
+
+                  <div className="flex items-start gap-1.5 bg-[#eff6ff]/70 p-3 font-semibold text-[#0a1128] sm:gap-2 sm:p-3.5">
+                    <Check
+                      size={13}
+                      className="mt-0.5 shrink-0 text-[#16a34a] sm:h-[14px] sm:w-[14px]"
+                      strokeWidth={2.6}
+                    />
+
+                    <span className="leading-snug">{sandesa}</span>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+
+        {/* ── Mobile Comparison Cards ── */}
+        <div className="mt-7 space-y-3 md:hidden">
+          {comparisonData.map(({ feature, whatsapp, sandesa }) => (
+            <div
+              key={feature}
+              className="w-full overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
+            >
+              {/* Feature */}
+              <div className="border-b border-[#e2e8f0] bg-[#f8fafc] px-4 py-3">
+                <span className="text-[13px] font-bold text-[#0a1128]">
                   {feature}
-                </div>
+                </span>
+              </div>
 
-                <div className="flex items-start gap-1.5 p-3 text-[#64748b] sm:gap-2 sm:p-3.5">
-                  <X
-                    size={13}
-                    className="mt-0.5 shrink-0 text-red-400 sm:h-[14px] sm:w-[14px]"
-                    strokeWidth={2.4}
-                  />
-                  <span className="leading-snug">{whatsapp}</span>
-                </div>
+              {/* WhatsApp */}
+              <div className="flex items-start gap-2.5 px-4 py-3">
+                <X
+                  size={14}
+                  className="mt-0.5 shrink-0 text-red-400"
+                  strokeWidth={2.4}
+                />
 
-                <div className="flex items-start gap-1.5 bg-[#eff6ff]/70 p-3 font-semibold text-[#0a1128] sm:gap-2 sm:p-3.5">
-                  <Check
-                    size={13}
-                    className="mt-0.5 shrink-0 text-[#16a34a] sm:h-[14px] sm:w-[14px]"
-                    strokeWidth={2.6}
-                  />
-                  <span className="leading-snug">{sandesa}</span>
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-[#94a3b8]">
+                    WhatsApp Business
+                  </p>
+
+                  <p className="mt-0.5 text-[12px] leading-relaxed text-[#64748b]">
+                    {whatsapp}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Sandesa */}
+              <div className="flex items-start gap-2.5 border-t border-[#edf2f7] bg-[#eff6ff]/70 px-4 py-3">
+                <Check
+                  size={14}
+                  className="mt-0.5 shrink-0 text-[#16a34a]"
+                  strokeWidth={2.6}
+                />
+
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-[#2563eb]">
+                    Sandesa AI
+                  </p>
+
+                  <p className="mt-0.5 text-[12px] font-semibold leading-relaxed text-[#0a1128]">
+                    {sandesa}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

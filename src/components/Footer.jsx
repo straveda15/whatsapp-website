@@ -102,7 +102,7 @@ const Footer = () => {
               </div>
 
               <span className="text-xl font-bold tracking-tight text-[#0a1128]">
-                Sandesa<span className="text-[#2563eb]">.</span>
+                Sandesa
               </span>
             </button>
 
@@ -112,7 +112,7 @@ const Footer = () => {
             </p>
 
             {/* ── Social Icons ── */}
-            <div className="mt-4 flex items-center gap-2.5">
+            <div className="mt-4 flex items-center justify-center gap-2 whitespace-nowrap">
               {socials.map(({ Icon, label, href, color }) => (
                 <a
                   key={label}
@@ -196,11 +196,11 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Sandesa. All Rights Reserved.</p>
 
           <a
-            href="https://stravedatech.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2"
-          >
+  href="https://stravedatech.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 flex items-center justify-center gap-1.5 whitespace-nowrap sm:mt-0"
+>
             <span className="text-[12px] font-medium tracking-wide text-[#64748b] sm:text-[13px]">
               Powered by
             </span>
