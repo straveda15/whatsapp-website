@@ -35,21 +35,21 @@ export const Comparison = () => {
       id="comparison"
       className="w-full bg-white py-8 px-5 sm:px-8 sm:py-10 lg:px-12 lg:py-14 border-y border-[#e2e8f0]"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
 
         {/* ── Top Badge & Heading ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             COMPARISON
           </span>
         </div>
 
         <div className="mt-4 text-center sm:mt-5">
-          <h2 className="text-[28px] font-bold leading-[1.18] tracking-tight text-[#0a1128] sm:text-[36px] md:text-[42px]">
-            WhatsApp is the channel
-            <br />
-            Sandesa is the system behind it
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+  WhatsApp is the channel
+  <br />
+  Sandesa is the system behind it
+</h2>
         </div>
 
         {/* ── Comparison Table Card ── */}

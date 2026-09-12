@@ -62,11 +62,10 @@ export const AIAgent = () => {
             </span>
 
             {/* Heading */}
-            <h2 className="mt-3.5 text-left text-[30px] font-bold tracking-tight text-[#0a1128] sm:mt-4 sm:text-4xl md:text-[42px] md:leading-[1.15]">
+            <h2 className="mt-3.5 text-left text-3xl font-bold tracking-tight text-[#0a1128] sm:mt-4 sm:text-4xl md:text-[42px] md:leading-[1.18]">
               Not just a chatbot
               <br />
               An AI agent that knows
-              <br />
               what to do next
             </h2>
 

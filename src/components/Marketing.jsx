@@ -15,7 +15,7 @@ const stepsRow2 = ["Qualify", "Follow Up", "Convert"];
 // ── Campaign rows ──
 const campaigns = [
   {
-    name: "Diwali Offer — Baner",
+    name: "Diwali Offer, Baner",
     sent: "8,420",
     replies: "1,932",
     status: "Running",
@@ -72,7 +72,7 @@ export const Marketing = () => {
       <div className="mx-auto max-w-6xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             MARKETING
           </span>
@@ -140,26 +140,36 @@ export const Marketing = () => {
             {/* Campaign Rows */}
             <div className="mt-4 space-y-3 sm:mt-5">
               {campaigns.map((camp) => (
-                <div
-                  key={camp.name}
-                  className="flex flex-col gap-2 rounded-2xl border border-[#edf2f7] bg-white p-3.5 transition-all hover:border-[#cbd5e1] sm:flex-row sm:items-center sm:justify-between"
-                >
-                  {/* Name */}
-                  <span className="text-[13.5px] font-medium text-[#0a1128]">
-                    {camp.name}
-                  </span>
+             <div
+  key={camp.name}
+  className="grid grid-cols-[1.5fr_0.8fr_0.8fr_0.7fr] items-center gap-3 rounded-2xl border border-[#edf2f7] bg-white p-3.5 transition-all hover:border-[#cbd5e1]"
+>
+  {/* Name */}
+  <span className="text-[13.5px] font-medium text-[#0a1128]">
+    {camp.name}
+  </span>
 
-                  {/* Sent & Replies stats */}
-                  <div className="flex items-center justify-between gap-4 text-[12px] text-slate-500 sm:justify-start">
-                    <span>Sent <strong className="font-semibold text-slate-800">{camp.sent}</strong></span>
-                    <span>Replies <strong className="font-semibold text-slate-800">{camp.replies}</strong></span>
-                  </div>
+  {/* Sent */}
+  <span className="text-left text-[12px] text-slate-500">
+    Sent{" "}
+    <strong className="font-semibold text-slate-800">
+      {camp.sent}
+    </strong>
+  </span>
 
-                  {/* Status pill */}
-                  <span className="w-fit rounded-full bg-[#eff6ff] px-3 py-0.5 text-[11px] font-semibold text-[#2563eb]">
-                    {camp.status}
-                  </span>
-                </div>
+  {/* Replies */}
+  <span className="text-left text-[12px] text-slate-500">
+    Replies{" "}
+    <strong className="font-semibold text-slate-800">
+      {camp.replies}
+    </strong>
+  </span>
+
+  {/* Status */}
+  <span className="justify-self-end rounded-full bg-[#eff6ff] px-3 py-0.5 text-[11px] font-semibold text-[#2563eb]">
+    {camp.status}
+  </span>
+</div>
               ))}
             </div>
           </div>

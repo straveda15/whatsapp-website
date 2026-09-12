@@ -105,7 +105,7 @@ const Footer = () => {
               </div>
 
               <span className="text-xl font-bold tracking-tight text-[#0a1128]">
-                Sandesa<span className="text-[#2563eb]">.</span>
+                Sandesa<span className="text-[#2563eb]"></span>
               </span>
             </button>
 

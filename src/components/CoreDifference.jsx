@@ -19,7 +19,7 @@ export const CoreDifference = () => {
       <div className="mx-auto max-w-6xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="relative flex justify-center -mt-7 mb-6">
           <span className="inline-flex items-center rounded-full border border-[#1e345b] bg-[#112344] px-4 py-1 text-[10.5px] font-bold uppercase tracking-wider text-[#8da6d8]">
             CORE DIFFERENCE
           </span>
@@ -27,15 +27,15 @@ export const CoreDifference = () => {
 
         {/* ── Heading & Subtitle (Exact Mobile Typography) ── */}
         <div className="mt-6 text-center">
-          <h2 className="mx-auto max-w-[850px] text-[28px] font-bold leading-[1.18] tracking-tight text-white sm:text-[36px] md:text-[42px]">
+          <h2 className="mx-auto max-w-[850px] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[42px] md:leading-[1.18]">
   Don't just automate replies
   <br />
   Automate what happens next
 </h2>
 
-          <p className="mx-auto mt-2 text-[14px] font-normal text-[#8ba2c7] sm:text-[15px]">
-            Talk less. Get more done.
-          </p>
+          <p className="mx-auto mt-2.5 max-w-2xl text-[14.5px] leading-[1.65] text-[#8ba2c7] sm:text-[15.5px]">
+  Talk less. Get more done.
+</p>
         </div>
 
         {/* ── 7 Step Cards (Full width on Mobile, 4-Cols on Desktop) ── */}

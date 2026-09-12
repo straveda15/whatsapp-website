@@ -37,16 +37,16 @@ const WhySandesa = () => {
       <div className="mx-auto max-w-[1240px]">
 
         {/* Section Badge */}
-        <div className="mb-4 flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="rounded-full border border-[#d8e6fe] bg-[#ebf3fe] px-4 py-1 text-[11px] font-medium uppercase tracking-wider text-[#1d64ec]">
             WHY SANDESA
           </span>
         </div>
 
         {/* ── Heading ── */}
-        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-tight text-[#0f172a] sm:text-[38px] lg:text-[44px]">
-          Why teams choose Sandesa
-        </h2>
+        <h2 className="text-center text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
+  Why teams choose Sandesa
+</h2>
 
         {/* Feature Cards */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 sm:mt-10">

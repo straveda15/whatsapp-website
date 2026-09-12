@@ -9,7 +9,7 @@ export const WorkflowBuilder = () => {
       <div className="mx-auto max-w-5xl">
 
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             WORKFLOW BUILDER
           </span>

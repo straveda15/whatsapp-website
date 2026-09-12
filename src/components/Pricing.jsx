@@ -58,7 +58,7 @@ export const Pricing = () => {
       <div className="mx-auto max-w-6xl">
         
         {/* ── Top Pill Badge ── */}
-        <div className="flex justify-center">
+        <div className="-mt-8 flex justify-center">
           <span className="inline-flex items-center rounded-full border border-[#d8e6fe] bg-[#eef4ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#2563eb]">
             PRICING
           </span>
@@ -67,14 +67,13 @@ export const Pricing = () => {
         {/* ── Heading & Subtitle ── */}
         <div className="mt-4 text-center sm:mt-5">
           <h2 className="text-3xl font-bold tracking-tight text-[#0a1128] sm:text-4xl md:text-[42px] md:leading-[1.18]">
-            Plans that grow with
-            
-            your conversations
-          </h2>
+  Plans that grow with
+  your conversations
+</h2>
 
-          <p className="mx-auto mt-3 max-w-2xl text-[14px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
-            Talk to us for pricing tailored to your team size and message volume.
-          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-[14.5px] leading-[1.65] text-[#64748b] sm:text-[15.5px]">
+  Talk to us for pricing tailored to your team size and message volume.
+</p>
         </div>
 
         {/* ── 4 Pricing Cards Grid ── */}
