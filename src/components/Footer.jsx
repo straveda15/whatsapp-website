@@ -30,6 +30,7 @@ const socials = [
     href: "https://www.linkedin.com/showcase/sandesa-ai/",
     color: "text-[#0A66C2]",
   },
+
   {
     Icon: FaInstagram,
     label: "Instagram",
