@@ -19,6 +19,7 @@ import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -54,6 +55,8 @@ function App() {
               <FAQ />
               <FinalCTA />
               <Footer />
+
+              <BackToTop />
 
               <a
                 href={getWhatsAppLink()}
